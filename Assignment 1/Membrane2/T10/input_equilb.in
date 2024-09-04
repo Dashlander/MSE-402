@@ -1,0 +1,70 @@
+units                  real
+atom_style	       full
+bond_style	       harmonic
+angle_style	       harmonic
+boundary	       p p p
+               
+neighbor 2.0 bin
+neigh_modify every 1 delay 0 check yes
+
+# ============= read data and parameters files
+
+read_data             memb_2.lammps
+
+pair_style            lj/cut 10.0
+pair_modify           shift yes mix arithmetic
+
+
+pair_coeff  1  1      0.0859  3.3997 
+pair_coeff  2  2      0.0659  3.5000
+pair_coeff  3  3      0.0859  3.3997
+pair_coeff  4  4      0.0859  3.3997
+pair_coeff  5  5      0.0299  2.5000
+pair_coeff  6  6      0.0000  1.0000
+pair_coeff  7  7      0.1521  3.1507  
+
+bond_coeff     1      938.0    1.42    
+bond_coeff     2      661.2    1.10
+bond_coeff     3      938.0    1.42
+bond_coeff     4      938.0    1.42
+bond_coeff     5      450.0    0.9572
+
+angle_coeff    1      126      120.0   
+angle_coeff    2      126      120.0
+angle_coeff    3      126      120.0
+angle_coeff    4      78.8     109.5 
+angle_coeff    5      55.0     104.52
+
+
+group  water     type 6  7
+group  memb      type 1
+group  CG1       type 3
+group  CG2       type 4
+group  CG3       type 3 4
+ 
+
+compute 9 all pe/atom
+
+dump dump_1 all custom 500 dump.lammpstrj id type x y z 
+
+timestep 1.0
+thermo_style custom step time cpu temp pe ke etotal press vol
+thermo 100
+
+fix                    myshk1  water shake 1.0e-5 200 0 b 5 a 5
+
+minimize               1.0e-4 1.0e-6 100 1000
+
+fix                    freeze memb setforce 0.0 0.0 0.0
+
+#fix                   pistonkeep CG3  setforce  0.0 0.0 NULL 
+#fix                   myforce1   CG1  aveforce NULL NULL  -0.03180     #P=50 bars
+#fix                   myforce2   CG2  aveforce NULL NULL  NULL
+fix                    freeze1    CG3  setforce 0.0 0.0 0.0
+
+fix                    mynvt  all nvt temp 300 300 10.0   
+run                    100000
+unfix                  mynvt
+
+
+write_data             equilb_200ps.data

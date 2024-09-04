@@ -1,0 +1,66 @@
+HEADER 
+TITLE     Built with Packmol                                             
+REMARK   Packmol generated pdb file 
+REMARK   Home-Page: http://m3g.iqm.unicamp.br/packmol
+REMARK
+HETATM    1  C   UNK A   1      19.663  22.118   7.641  1.00  0.00           C  
+HETATM    2  O   UNK A   1      19.390  22.949   8.696  1.00  0.00           O  
+HETATM    3  O   UNK A   1      20.010  22.867   6.546  1.00  0.00           O  
+HETATM    4  C   UNK A   2       4.030  24.834   6.178  1.00  0.00           C  
+HETATM    5  O   UNK A   2       5.373  24.578   6.081  1.00  0.00           O  
+HETATM    6  O   UNK A   2       3.563  25.290   4.973  1.00  0.00           O  
+HETATM    7  C   UNK A   3      14.074   3.727  18.740  1.00  0.00           C  
+HETATM    8  O   UNK A   3      14.015   2.358  18.730  1.00  0.00           O  
+HETATM    9  O   UNK A   3      15.344   4.127  19.066  1.00  0.00           O  
+HETATM   10  C   UNK A   4      20.219   1.181  21.073  1.00  0.00           C  
+HETATM   11  O   UNK A   4      21.075   2.227  20.849  1.00  0.00           O  
+HETATM   12  O   UNK A   4      20.844   0.002  20.760  1.00  0.00           O  
+HETATM   13  C   UNK A   5      14.225  11.329  24.825  1.00  0.00           C  
+HETATM   14  O   UNK A   5      15.172  10.362  24.608  1.00  0.00           O  
+HETATM   15  O   UNK A   5      14.844  12.524  25.086  1.00  0.00           O  
+HETATM   16  C   UNK A   6      22.576   5.036   5.679  1.00  0.00           C  
+HETATM   17  O   UNK A   6      22.441   3.842   5.019  1.00  0.00           O  
+HETATM   18  O   UNK A   6      21.359   5.662   5.746  1.00  0.00           O  
+HETATM   19  C   UNK A   7      24.691  22.034  14.869  1.00  0.00           C  
+HETATM   20  O   UNK A   7      25.747  21.364  14.308  1.00  0.00           O  
+HETATM   21  O   UNK A   7      24.023  21.200  15.727  1.00  0.00           O  
+HETATM   22  C   UNK A   8      15.913  12.407  10.774  1.00  0.00           C  
+HETATM   23  O   UNK A   8      16.875  12.866  11.635  1.00  0.00           O  
+HETATM   24  O   UNK A   8      15.246  13.470  10.224  1.00  0.00           O  
+HETATM   25  C   UNK A   9      16.244  17.106   2.386  1.00  0.00           C  
+HETATM   26  O   UNK A   9      16.500  18.040   3.356  1.00  0.00           O  
+HETATM   27  O   UNK A   9      16.804  15.908   2.746  1.00  0.00           O  
+HETATM   28  C   UNK A  10      23.683  21.684   8.263  1.00  0.00           C  
+HETATM   29  O   UNK A  10      23.482  23.037   8.348  1.00  0.00           O  
+HETATM   30  O   UNK A  10      25.026  21.426   8.176  1.00  0.00           O  
+CONECT    1    2    3
+CONECT    2    1
+CONECT    3    1
+CONECT    4    5    6
+CONECT    5    4
+CONECT    6    4
+CONECT    7    8    9
+CONECT    8    7
+CONECT    9    7
+CONECT   10   11   12
+CONECT   11   10
+CONECT   12   10
+CONECT   13   14   15
+CONECT   14   13
+CONECT   15   13
+CONECT   16   17   18
+CONECT   17   16
+CONECT   18   16
+CONECT   19   20   21
+CONECT   20   19
+CONECT   21   19
+CONECT   22   23   24
+CONECT   23   22
+CONECT   24   22
+CONECT   25   26   27
+CONECT   26   25
+CONECT   27   25
+CONECT   28   29   30
+CONECT   29   28
+CONECT   30   28
+END
