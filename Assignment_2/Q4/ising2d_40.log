@@ -1,0 +1,749 @@
+ *** run_date: Wed Sep 25 12:16:08 2024
+
+ *** machine: 
+dashpc
+ ***
+                         initialization:         1
+            number equilibration steps:     500000
+ 
+                                   size:        40
+                        number of steps:  10000000
+ Total number of MC moves: 
+  0.1600000E+11
+                                   kT/J:    10.00000000
+ Using random initial config
+ initial energy of lattice    -3.60000000000000     
+ initial magnetization of lattice           10
+ At equilibration step:       100000
+ energy, magnetization 
+  -38.4000000002102                8
+ At equilibration step:       200000
+ energy, magnetization 
+  -21.6000000004043                2
+ At equilibration step:       300000
+ energy, magnetization 
+  -37.6000000006142               80
+ At equilibration step:       400000
+ energy, magnetization 
+  -35.6000000008297               36
+ At equilibration step:       500000
+ energy, magnetization 
+  -24.4000000010539               26
+ >>> finished relaxation
+ total elapsed time =        31.2 seconds
+
+ After lattice relaxation 
+ energy, magnetization   -24.4000000000000               26
+ 
+ After cycles:     10000000
+                   mean energy per spin:    -0.02033916
+        rms energy fluctuation per spin:     0.00362264
+            mean magnetization per spin:    -0.00002727
+ rms magnetization fluctuation per spin:     0.03128867
+ At cycle            1
+ >>> time
+ total elapsed time =       649.9 seconds
+
+ 
+                                   size:        40
+                        number of steps:  10000000
+ Total number of MC moves: 
+  0.1600000E+11
+                                   kT/J:     9.50000000
+ Using random initial config
+ initial energy of lattice    0.842105263157895     
+ initial magnetization of lattice            4
+ At equilibration step:       100000
+ energy, magnetization 
+  -33.2631578946346               28
+ At equilibration step:       200000
+ energy, magnetization 
+  -38.7368421050222              -12
+ At equilibration step:       300000
+ energy, magnetization 
+  -34.1052631575445               54
+ At equilibration step:       400000
+ energy, magnetization 
+  -44.6315789469137             -120
+ At equilibration step:       500000
+ energy, magnetization 
+  -41.2631578941639               46
+ >>> finished relaxation
+ total elapsed time =       680.9 seconds
+
+ After lattice relaxation 
+ energy, magnetization   -41.2631578947368               46
+ 
+ After cycles:     10000000
+                   mean energy per spin:    -0.02257541
+        rms energy fluctuation per spin:     0.00382640
+            mean magnetization per spin:    -0.00001022
+ rms magnetization fluctuation per spin:     0.03170990
+ At cycle            2
+ >>> time
+ total elapsed time =      1303.6 seconds
+
+ 
+                                   size:        40
+                        number of steps:  10000000
+ Total number of MC moves: 
+  0.1600000E+11
+                                   kT/J:     9.00000000
+ Using random initial config
+ initial energy of lattice     4.44444444444444     
+ initial magnetization of lattice            4
+ At equilibration step:       100000
+ energy, magnetization 
+  -44.0000000000877               28
+ At equilibration step:       200000
+ energy, magnetization 
+  -34.2222222223983               76
+ At equilibration step:       300000
+ energy, magnetization 
+  -49.7777777780434             -142
+ At equilibration step:       400000
+ energy, magnetization 
+  -42.6666666670225               42
+ At equilibration step:       500000
+ energy, magnetization 
+  -37.3333333337737               30
+ >>> finished relaxation
+ total elapsed time =      1334.8 seconds
+
+ After lattice relaxation 
+ energy, magnetization   -37.3333333333333               30
+ 
+ After cycles:     10000000
+                   mean energy per spin:    -0.02520851
+        rms energy fluctuation per spin:     0.00405128
+            mean magnetization per spin:     0.00000027
+ rms magnetization fluctuation per spin:     0.03220638
+ At cycle            3
+ >>> time
+ total elapsed time =      1959.7 seconds
+
+ 
+                                   size:        40
+                        number of steps:  10000000
+ Total number of MC moves: 
+  0.1600000E+11
+                                   kT/J:     8.50000000
+ Using random initial config
+ initial energy of lattice    -6.58823529411765     
+ initial magnetization of lattice            0
+ At equilibration step:       100000
+ energy, magnetization 
+  -45.6470588235715              -34
+ At equilibration step:       200000
+ energy, magnetization 
+  -41.8823529412584               36
+ At equilibration step:       300000
+ energy, magnetization 
+  -39.5294117648312               14
+ At equilibration step:       400000
+ energy, magnetization 
+  -53.1764705884026              108
+ At equilibration step:       500000
+ energy, magnetization 
+  -52.7058823531513              -56
+ >>> finished relaxation
+ total elapsed time =      1991.1 seconds
+
+ After lattice relaxation 
+ energy, magnetization   -52.7058823529412              -56
+ 
+ After cycles:     10000000
+                   mean energy per spin:    -0.02833292
+        rms energy fluctuation per spin:     0.00430653
+            mean magnetization per spin:    -0.00001536
+ rms magnetization fluctuation per spin:     0.03277638
+ At cycle            4
+ >>> time
+ total elapsed time =      2620.7 seconds
+
+ 
+                                   size:        40
+                        number of steps:  10000000
+ Total number of MC moves: 
+  0.1600000E+11
+                                   kT/J:     8.00000000
+ Using random initial config
+ initial energy of lattice    -1.00000000000000     
+ initial magnetization of lattice          -34
+ At equilibration step:       100000
+ energy, magnetization 
+  -56.0000000000000               62
+ At equilibration step:       200000
+ energy, magnetization 
+  -53.5000000000000              104
+ At equilibration step:       300000
+ energy, magnetization 
+  -40.0000000000000              116
+ At equilibration step:       400000
+ energy, magnetization 
+  -41.0000000000000               50
+ At equilibration step:       500000
+ energy, magnetization 
+  -40.5000000000000              -10
+ >>> finished relaxation
+ total elapsed time =      2652.4 seconds
+
+ After lattice relaxation 
+ energy, magnetization   -40.5000000000000              -10
+ 
+ After cycles:     10000000
+                   mean energy per spin:    -0.03207883
+        rms energy fluctuation per spin:     0.00459598
+            mean magnetization per spin:     0.00000674
+ rms magnetization fluctuation per spin:     0.03342979
+ At cycle            5
+ >>> time
+ total elapsed time =      3286.3 seconds
+
+ 
+                                   size:        40
+                        number of steps:  10000000
+ Total number of MC moves: 
+  0.1600000E+11
+                                   kT/J:     7.50000000
+ Using random initial config
+ initial energy of lattice     6.93333333333333     
+ initial magnetization of lattice            0
+ At equilibration step:       100000
+ energy, magnetization 
+  -53.3333333336622               90
+ At equilibration step:       200000
+ energy, magnetization 
+  -58.6666666673238                4
+ At equilibration step:       300000
+ energy, magnetization 
+  -58.1333333343458               -2
+ At equilibration step:       400000
+ energy, magnetization 
+  -56.0000000013606              -42
+ At equilibration step:       500000
+ energy, magnetization 
+  -55.4666666683891              -58
+ >>> finished relaxation
+ total elapsed time =      3318.1 seconds
+
+ After lattice relaxation 
+ energy, magnetization   -55.4666666666667              -58
+ 
+ After cycles:     10000000
+                   mean energy per spin:    -0.03663356
+        rms energy fluctuation per spin:     0.00492679
+            mean magnetization per spin:     0.00002624
+ rms magnetization fluctuation per spin:     0.03422990
+ At cycle            6
+ >>> time
+ total elapsed time =      3956.1 seconds
+
+ 
+                                   size:        40
+                        number of steps:  10000000
+ Total number of MC moves: 
+  0.1600000E+11
+                                   kT/J:     7.00000000
+ Using random initial config
+ initial energy of lattice     1.71428571428571     
+ initial magnetization of lattice          -16
+ At equilibration step:       100000
+ energy, magnetization 
+  -65.1428571432191              -42
+ At equilibration step:       200000
+ energy, magnetization 
+  -84.0000000007250               -2
+ At equilibration step:       300000
+ energy, magnetization 
+  -70.8571428582174              -84
+ At equilibration step:       400000
+ energy, magnetization 
+  -57.1428571443112              -46
+ At equilibration step:       500000
+ energy, magnetization 
+  -48.5714285732526              100
+ >>> finished relaxation
+ total elapsed time =      3988.3 seconds
+
+ After lattice relaxation 
+ energy, magnetization   -48.5714285714286              100
+ 
+ After cycles:     10000000
+                   mean energy per spin:    -0.04224269
+        rms energy fluctuation per spin:     0.00531351
+            mean magnetization per spin:    -0.00002551
+ rms magnetization fluctuation per spin:     0.03516235
+ At cycle            7
+ >>> time
+ total elapsed time =      4632.3 seconds
+
+ 
+                                   size:        40
+                        number of steps:  10000000
+ Total number of MC moves: 
+  0.1600000E+11
+                                   kT/J:     6.50000000
+ Using random initial config
+ initial energy of lattice   -0.615384615384615     
+ initial magnetization of lattice           32
+ At equilibration step:       100000
+ energy, magnetization 
+  -83.0769230770134              -32
+ At equilibration step:       200000
+ energy, magnetization 
+  -73.2307692309587               58
+ At equilibration step:       300000
+ energy, magnetization 
+  -69.5384615387440               56
+ At equilibration step:       400000
+ energy, magnetization 
+  -76.9230769234534              -16
+ At equilibration step:       500000
+ energy, magnetization 
+  -86.1538461543174                0
+ >>> finished relaxation
+ total elapsed time =      4664.8 seconds
+
+ After lattice relaxation 
+ energy, magnetization   -86.1538461538462                0
+ 
+ After cycles:     10000000
+                   mean energy per spin:    -0.04926645
+        rms energy fluctuation per spin:     0.00576921
+            mean magnetization per spin:    -0.00001009
+ rms magnetization fluctuation per spin:     0.03633007
+ At cycle            8
+ >>> time
+ total elapsed time =      5315.8 seconds
+
+ 
+                                   size:        40
+                        number of steps:  10000000
+ Total number of MC moves: 
+  0.1600000E+11
+                                   kT/J:     6.00000000
+ Using random initial config
+ initial energy of lattice     4.66666666666667     
+ initial magnetization of lattice          -32
+ At equilibration step:       100000
+ energy, magnetization 
+  -95.3333333332915               22
+ At equilibration step:       200000
+ energy, magnetization 
+  -75.9999999999436               28
+ At equilibration step:       300000
+ energy, magnetization 
+  -83.9999999998861             -132
+ At equilibration step:       400000
+ energy, magnetization 
+  -100.666666666539              -34
+ At equilibration step:       500000
+ energy, magnetization 
+  -94.6666666664772               50
+ >>> finished relaxation
+ total elapsed time =      5348.7 seconds
+
+ After lattice relaxation 
+ energy, magnetization   -94.6666666666667               50
+ 
+ After cycles:     10000000
+                   mean energy per spin:    -0.05822603
+        rms energy fluctuation per spin:     0.00631389
+            mean magnetization per spin:    -0.00003267
+ rms magnetization fluctuation per spin:     0.03777974
+ At cycle            9
+ >>> time
+ total elapsed time =      6006.0 seconds
+
+ 
+                                   size:        40
+                        number of steps:  10000000
+ Total number of MC moves: 
+  0.1600000E+11
+                                   kT/J:     5.50000000
+ Using random initial config
+ initial energy of lattice     7.27272727272727     
+ initial magnetization of lattice           12
+ At equilibration step:       100000
+ energy, magnetization 
+  -109.818181817921               -6
+ At equilibration step:       200000
+ energy, magnetization 
+  -98.1818181813669               92
+ At equilibration step:       300000
+ energy, magnetization 
+  -111.999999999318               70
+ At equilibration step:       400000
+ energy, magnetization 
+  -133.090909090012              -66
+ At equilibration step:       500000
+ energy, magnetization 
+  -90.1818181807286               -2
+ >>> finished relaxation
+ total elapsed time =      6039.2 seconds
+
+ After lattice relaxation 
+ energy, magnetization   -90.1818181818182               -2
+ 
+ After cycles:     10000000
+                   mean energy per spin:    -0.06993327
+        rms energy fluctuation per spin:     0.00697927
+            mean magnetization per spin:     0.00000494
+ rms magnetization fluctuation per spin:     0.03970525
+ At cycle           10
+ >>> time
+ total elapsed time =      6704.8 seconds
+
+ 
+                                   size:        40
+                        number of steps:  10000000
+ Total number of MC moves: 
+  0.1600000E+11
+                                   kT/J:     5.00000000
+ Using random initial config
+ initial energy of lattice     24.0000000000000     
+ initial magnetization of lattice           12
+ At equilibration step:       100000
+ energy, magnetization 
+  -143.200000002356               68
+ At equilibration step:       200000
+ energy, magnetization 
+  -136.800000004683               42
+ At equilibration step:       300000
+ energy, magnetization 
+  -118.400000006940               24
+ At equilibration step:       400000
+ energy, magnetization 
+  -138.400000009244              -42
+ At equilibration step:       500000
+ energy, magnetization 
+  -158.400000011629              -62
+ >>> finished relaxation
+ total elapsed time =      6738.5 seconds
+
+ After lattice relaxation 
+ energy, magnetization   -158.400000000000              -62
+ 
+ After cycles:     10000000
+                   mean energy per spin:    -0.08564820
+        rms energy fluctuation per spin:     0.00781403
+            mean magnetization per spin:     0.00004887
+ rms magnetization fluctuation per spin:     0.04231129
+ At cycle           11
+ >>> time
+ total elapsed time =      7409.6 seconds
+
+ 
+                                   size:        40
+                        number of steps:  10000000
+ Total number of MC moves: 
+  0.1600000E+11
+                                   kT/J:     4.50000000
+ Using random initial config
+ initial energy of lattice     17.7777777777778     
+ initial magnetization of lattice          -10
+ At equilibration step:       100000
+ energy, magnetization 
+  -178.666666666666             -176
+ At equilibration step:       200000
+ energy, magnetization 
+  -164.444444444444              -72
+ At equilibration step:       300000
+ energy, magnetization 
+  -170.666666666666               28
+ At equilibration step:       400000
+ energy, magnetization 
+  -170.666666666666              -22
+ At equilibration step:       500000
+ energy, magnetization 
+  -169.777777777777              -24
+ >>> finished relaxation
+ total elapsed time =      7443.0 seconds
+
+ After lattice relaxation 
+ energy, magnetization   -169.777777777778              -24
+ 
+ After cycles:     10000000
+                   mean energy per spin:    -0.10750292
+        rms energy fluctuation per spin:     0.00889082
+            mean magnetization per spin:    -0.00002787
+ rms magnetization fluctuation per spin:     0.04595407
+ At cycle           12
+ >>> time
+ total elapsed time =      8114.7 seconds
+
+ 
+                                   size:        40
+                        number of steps:  10000000
+ Total number of MC moves: 
+  0.1600000E+11
+                                   kT/J:     4.00000000
+ Using random initial config
+ initial energy of lattice    -24.0000000000000     
+ initial magnetization of lattice           10
+ At equilibration step:       100000
+ energy, magnetization 
+  -233.000000000000              -36
+ At equilibration step:       200000
+ energy, magnetization 
+  -217.000000000000              -28
+ At equilibration step:       300000
+ energy, magnetization 
+  -222.000000000000              -40
+ At equilibration step:       400000
+ energy, magnetization 
+  -223.000000000000              100
+ At equilibration step:       500000
+ energy, magnetization 
+  -238.000000000000              -36
+ >>> finished relaxation
+ total elapsed time =      8148.1 seconds
+
+ After lattice relaxation 
+ energy, magnetization   -238.000000000000              -36
+ 
+ After cycles:     10000000
+                   mean energy per spin:    -0.13932322
+        rms energy fluctuation per spin:     0.01034049
+            mean magnetization per spin:     0.00001423
+ rms magnetization fluctuation per spin:     0.05173360
+ At cycle           13
+ >>> time
+ total elapsed time =      8815.9 seconds
+
+ 
+                                   size:        40
+                        number of steps:  10000000
+ Total number of MC moves: 
+  0.1600000E+11
+                                   kT/J:     3.50000000
+ Using random initial config
+ initial energy of lattice     8.00000000000000     
+ initial magnetization of lattice           24
+ At equilibration step:       100000
+ energy, magnetization 
+  -322.285714286023               40
+ At equilibration step:       200000
+ energy, magnetization 
+  -322.285714286075             -148
+ At equilibration step:       300000
+ energy, magnetization 
+  -254.857142857903             -148
+ At equilibration step:       400000
+ energy, magnetization 
+  -283.428571429523             -122
+ At equilibration step:       500000
+ energy, magnetization 
+  -300.571428572647               44
+ >>> finished relaxation
+ total elapsed time =      8849.1 seconds
+
+ After lattice relaxation 
+ energy, magnetization   -300.571428571429               44
+ 
+ After cycles:     10000000
+                   mean energy per spin:    -0.18859717
+        rms energy fluctuation per spin:     0.01243905
+            mean magnetization per spin:    -0.00000598
+ rms magnetization fluctuation per spin:     0.06186140
+ At cycle           14
+ >>> time
+ total elapsed time =      9510.7 seconds
+
+ 
+                                   size:        40
+                        number of steps:  10000000
+ Total number of MC moves: 
+  0.1600000E+11
+                                   kT/J:     3.00000000
+ Using random initial config
+ initial energy of lattice     18.6666666666667     
+ initial magnetization of lattice           54
+ At equilibration step:       100000
+ energy, magnetization 
+  -457.333333333357              244
+ At equilibration step:       200000
+ energy, magnetization 
+  -434.666666666705              120
+ At equilibration step:       300000
+ energy, magnetization 
+  -441.333333333493              242
+ At equilibration step:       400000
+ energy, magnetization 
+  -488.000000000082               48
+ At equilibration step:       500000
+ energy, magnetization 
+  -410.666666666632              -20
+ >>> finished relaxation
+ total elapsed time =      9542.4 seconds
+
+ After lattice relaxation 
+ energy, magnetization   -410.666666666667              -20
+ 
+ After cycles:     10000000
+                   mean energy per spin:    -0.27243299
+        rms energy fluctuation per spin:     0.01583823
+            mean magnetization per spin:     0.00004881
+ rms magnetization fluctuation per spin:     0.08506843
+ At cycle           15
+ >>> time
+ total elapsed time =     10176.3 seconds
+
+ 
+                                   size:        40
+                        number of steps:  10000000
+ Total number of MC moves: 
+  0.1600000E+11
+                                   kT/J:     2.50000000
+ Using random initial config
+ initial energy of lattice    -28.8000000000000     
+ initial magnetization of lattice          -48
+ At equilibration step:       100000
+ energy, magnetization 
+  -726.400000000005              546
+ At equilibration step:       200000
+ energy, magnetization 
+  -745.600000000005              156
+ At equilibration step:       300000
+ energy, magnetization 
+  -697.600000000004              128
+ At equilibration step:       400000
+ energy, magnetization 
+  -688.000000000004              162
+ At equilibration step:       500000
+ energy, magnetization 
+  -699.200000000004              656
+ >>> finished relaxation
+ total elapsed time =     10205.4 seconds
+
+ After lattice relaxation 
+ energy, magnetization   -699.200000000000              656
+ 
+ After cycles:     10000000
+                   mean energy per spin:    -0.44249304
+        rms energy fluctuation per spin:     0.02331505
+            mean magnetization per spin:     0.00056706
+ rms magnetization fluctuation per spin:     0.19735527
+ At cycle           16
+ >>> time
+ total elapsed time =     10787.6 seconds
+
+ 
+                                   size:        40
+                        number of steps:  10000000
+ Total number of MC moves: 
+  0.1600000E+11
+                                   kT/J:     2.00000000
+ Using random initial config
+ initial energy of lattice     18.0000000000000     
+ initial magnetization of lattice           64
+ At equilibration step:       100000
+ energy, magnetization 
+  -1330.00000000000             1374
+ At equilibration step:       200000
+ energy, magnetization 
+  -1406.00000000000             1472
+ At equilibration step:       300000
+ energy, magnetization 
+  -1354.00000000000             1428
+ At equilibration step:       400000
+ energy, magnetization 
+  -1376.00000000000             1456
+ At equilibration step:       500000
+ energy, magnetization 
+  -1368.00000000000             1446
+ >>> finished relaxation
+ total elapsed time =     10812.2 seconds
+
+ After lattice relaxation 
+ energy, magnetization   -1368.00000000000             1446
+ 
+ After cycles:     10000000
+                   mean energy per spin:    -0.87277913
+        rms energy fluctuation per spin:     0.02128629
+            mean magnetization per spin:     0.91130402
+ rms magnetization fluctuation per spin:     0.02206078
+ At cycle           17
+ >>> time
+ total elapsed time =     11302.3 seconds
+
+ 
+                                   size:        40
+                        number of steps:  10000000
+ Total number of MC moves: 
+  0.1600000E+11
+                                   kT/J:     1.50000000
+ Using random initial config
+ initial energy of lattice     2.66666666666667     
+ initial magnetization of lattice           16
+ At equilibration step:       100000
+ energy, magnetization 
+  -2098.66666666740            -1584
+ At equilibration step:       200000
+ energy, magnetization 
+  -2072.00000000148            -1576
+ At equilibration step:       300000
+ energy, magnetization 
+  -2085.33333333550            -1578
+ At equilibration step:       400000
+ energy, magnetization 
+  -2082.66666666944            -1580
+ At equilibration step:       500000
+ energy, magnetization 
+  -2077.33333333685            -1578
+ >>> finished relaxation
+ total elapsed time =     11325.5 seconds
+
+ After lattice relaxation 
+ energy, magnetization   -2077.33333333333            -1578
+ 
+ After cycles:     10000000
+                   mean energy per spin:    -1.30075347
+        rms energy fluctuation per spin:     0.01110106
+            mean magnetization per spin:    -0.98650361
+ rms magnetization fluctuation per spin:     0.00503706
+ At cycle           18
+ >>> time
+ total elapsed time =     11790.1 seconds
+
+ 
+                                   size:        40
+                        number of steps:  10000000
+ Total number of MC moves: 
+  0.1600000E+11
+                                   kT/J:     1.00000000
+ Using random initial config
+ initial energy of lattice     40.0000000000000     
+ initial magnetization of lattice          -56
+ At equilibration step:       100000
+ energy, magnetization 
+  -3192.00000000000            -1598
+ At equilibration step:       200000
+ energy, magnetization 
+  -3200.00000000000            -1600
+ At equilibration step:       300000
+ energy, magnetization 
+  -3200.00000000000            -1600
+ At equilibration step:       400000
+ energy, magnetization 
+  -3200.00000000000            -1600
+ At equilibration step:       500000
+ energy, magnetization 
+  -3200.00000000000            -1600
+ >>> finished relaxation
+ total elapsed time =     11813.2 seconds
+
+ After lattice relaxation 
+ energy, magnetization   -3200.00000000000            -1600
+ 
+ After cycles:     10000000
+                   mean energy per spin:    -1.99716212
+        rms energy fluctuation per spin:     0.00382102
+            mean magnetization per spin:    -0.99927625
+ rms magnetization fluctuation per spin:     0.00099000
+ At cycle           19
+ >>> time
+ total elapsed time =     12273.4 seconds
+
+ Finished with ising2d

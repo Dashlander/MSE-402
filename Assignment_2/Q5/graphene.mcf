@@ -1,0 +1,34 @@
+!*******************************************************************************
+!Molecular connectivity file for graphene.pdb
+!*******************************************************************************
+!Atom Format
+!index type element mass charge type parameters
+!type="LJ", parms=epsilon sigma
+
+# Atom_Info
+1
+1    C       C    12.011    0.0    LJ    0. 0.
+
+# Bond_Info
+0
+
+# Angle_Info
+0
+
+# Dihedral_Info
+0
+
+# Improper_Info
+0
+
+!Fragment Format
+!index number_of_atoms_in_fragment branch_point other_atoms
+
+# Fragment_Info
+0
+
+# Fragment_Connectivity
+0
+
+
+END

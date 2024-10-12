@@ -1,0 +1,2087 @@
+********************************************************************************
+                ______                                __                        
+               / ____/___ _______________ _____  ____/ /________ _              
+              / /   / __ `/ ___/ ___/ __ `/ __ \/ __  / ___/ __ `/              
+             / /___/ /_/ (__  |__  ) /_/ / / / / /_/ / /  / /_/ /               
+             \____/\__,_/____/____/\__,_/_/ /_/\__,_/_/   \__,_/                
+                                                                                
+********************************************************************************
+**********************************Log File**************************************
+********************************************************************************
+
+For any published work that uses Cassandra, cite the following reference:
+    Shah JK, Marin‐Rimoldi E, Mullen RG, Keene BP, Khan S,
+    Paluch AS, Rai N, Romanielo LL, Rosch TW, Yoo B, Maginn EJ.
+    Cassandra: An open source Monte Carlo package for molecular simulation.
+    Journal of Computational Chemistry. 2017, 38, 1727–1739.
+    http://dx.doi.org/10.1002/jcc.24807
+
+Run info
+********************************************************************************
+version: Cassandra Version 1.3.0
+inputfile: nvt.inp
+name of run: Graphene_H2O
+date (mm/dd/yyyy): 10/08/2024
+time: 01:16:15
+machine: dashpc
+********************************************************************************
+
+Verbose log
+********************************************************************************
+Normal output to logfile
+********************************************************************************
+
+Simulation type
+********************************************************************************
+NVT_MC              
+********************************************************************************
+
+Copy input file
+********************************************************************************
+                                                                                
+# Run_Name                                                                      
+Graphene_H2O                                                                    
+                                                                                
+# Sim_Type                                                                      
+NVT_MC                                                                          
+                                                                                
+# Nbr_Species                                                                   
+2                                                                               
+                                                                                
+# VDW_Style                                                                     
+LJ cut_tail 12.0                                                                
+                                                                                
+# Charge_Style                                                                  
+coul Ewald 12.0 0.00001                                                         
+                                                                                
+# Intra_Scaling                                                                 
+0.0 0.0 0.0 1.0                                                                 
+0.0 0.0 0.0 1.0                                                                 
+0.0 0.0 0.0 1.0                                                                 
+0.0 0.0 0.0 1.0                                                                 
+                                                                                
+# Mixing_Rule                                                                   
+custom                                                                          
+O C 31.7192 3.3838                                                              
+                                                                                
+                                                                                
+# Seed_Info                                                                     
+1244433 8263663                                                                 
+                                                                                
+# Rcutoff_Low                                                                   
+1.0                                                                             
+                                                                                
+# Molecule_Files                                                                
+spce.mcf     500                                                                
+graphene.mcf 4032                                                               
+                                                                                
+# Box_Info                                                                      
+1                                                                               
+ORTHOGONAL                                                                      
+51.577   51.048   24.8                                                          
+                                                                                
+# Temperature_Info                                                              
+300.                                                                            
+                                                                                
+# Move_Probability_Info                                                         
+                                                                                
+# Prob_Translation                                                              
+0.5                                                                             
+2.0 0.                                                                          
+                                                                                
+# Prob_Rotation                                                                 
+0.5                                                                             
+10. 0.                                                                          
+                                                                                
+# Done_Probability_Info                                                         
+                                                                                
+# Start_Type                                                                    
+add_to_config 0 4032 graphene.xyz 500 0                                         
+                                                                                
+# Run_Type                                                                      
+Equilibration   3000                                                            
+                                                                                
+# Average_Info                                                                  
+1                                                                               
+                                                                                
+# Simulation_Length_Info                                                        
+Units        steps                                                              
+Prop_Freq 1000                                                                  
+Coord_Freq  1000                                                                
+Run  5000000                                                                    
+                                                                                
+# Property_Info 1                                                               
+Energy_Total                                                                    
+                                                                                
+# Fragment_Files                                                                
+spce.dat  1                                                                     
+                                                                                
+# CBMC_Info                                                                     
+kappa_ins 12                                                                    
+kappa_rot 0                                                                     
+kappa_dih 10                                                                    
+rcut_cbmc 6.5                                                                   
+                                                                                
+END                                                                             
+********************************************************************************
+
+Number of species
+********************************************************************************
+2
+********************************************************************************
+
+Box info
+********************************************************************************
+Number of simulation boxes     1
+Box 1 is ORTHORHOMBIC        
+ X dimension :        51.5770     Angstrom
+ Y dimension :        51.0480     Angstrom
+ Z dimension :        24.8000     Angstrom
+ Cell basis vector lengths in A,     51.5770      51.0480      24.8000
+ Cosine of angles alpha, beta, gamma     0.0000       0.0000       0.0000
+ Distance between box faces    51.5770      51.0480      24.8000
+ Box volume, A^3         65295.9869
+********************************************************************************
+
+Pair style
+********************************************************************************
+VDW style used is:   LJ             in box:  1
+ VDW sum style is:   cut_tail       in box:  1
+ rcut =    12.000 Angstrom
+Charge style in box 1 is coul
+ Charge sum style is   Ewald          in box:  1
+ Ewald real space cutoff is  12.000 Angstroms.
+ Ewald real space parameter is   0.283 inverse Angstroms
+ Ewald reciprocal cutoff is  1.9188 inverse Angstroms
+Section "# Pair_Energy" is missing from the input file
+ By default, pair interaction energy arrays will not be stored
+Custom mixing rule specified
+********************************************************************************
+
+Molecule info
+********************************************************************************
+ Reading molecular connectivity information
+ Species:            1
+ Molecular connectivity file: spce.mcf                                                                                                                
+   3 atom(s) specified.
+   2 bond(s) specified.
+   1 angle(s) specified.
+   0 dihedral(s) specified.
+   1 fragment(s) specified.
+   0 improper(s) specified.
+   0 fragment bond(s) specified.
+ Reading molecular connectivity information
+ Species:            2
+ Molecular connectivity file: graphene.mcf                                                                                                            
+   1 atom(s) specified.
+   0 bond(s) specified.
+   0 angle(s) specified.
+   0 dihedral(s) specified.
+   0 improper(s) specified.
+   0 fragment(s) specified.
+   0 fragment bond(s) specified.
+
+ Species  Max molecules
+ -------  -------------
+      1            500
+      2           4032
+
+ Species     1
+ -------------------------------------------------------------------------------
+ Atom parameters read
+ Bond parameters read
+ Angle parameters read
+ Dihedral parameters read
+ Improper parameters read
+ Section "# Intra_Scaling" missing from mcf, will look in input file
+ Intra molecule scaling factors for species            1
+  VDW 1-2 scaling factor       0.000
+  VDW 1-3 scaling factor       0.000
+  VDW 1-4 scaling factor       0.000
+  VDW 1-N scaling factor       1.000
+  Coulomb 1-2 scaling factor   0.000
+  Coulomb 1-3 scaling factor   0.000
+  Coulomb 1-4 scaling factor   0.000
+  Coulomb 1-N scaling factor   1.000
+ Total number of atoms in fragment     1  is   3
+ Fragment info read
+ Fragment file for fragment 1 is spce.dat
+ -------------------------------------------------------------------------------
+
+ Species     2
+ -------------------------------------------------------------------------------
+ Atom parameters read
+ Bond parameters read
+ Angle parameters read
+ Dihedral parameters read
+ Improper parameters read
+ Section "# Intra_Scaling" missing from mcf, will look in input file
+ Intra molecule scaling factors for species            2
+  VDW 1-2 scaling factor       0.000
+  VDW 1-3 scaling factor       0.000
+  VDW 1-4 scaling factor       0.000
+  VDW 1-N scaling factor       1.000
+  Coulomb 1-2 scaling factor   0.000
+  Coulomb 1-3 scaling factor   0.000
+  Coulomb 1-4 scaling factor   0.000
+  Coulomb 1-N scaling factor   1.000
+ -------------------------------------------------------------------------------
+
+ Fragment coord info
+ -------------------------------------------------------------------------------
+ library_coords array successfully allocated
+ Finished loading fragment coordinates from
+ spce.dat
+ -------------------------------------------------------------------------------
+********************************************************************************
+
+Temperature
+********************************************************************************
+Temperature of box 1 is 300.000 K
+********************************************************************************
+
+Minimum distance cutoff
+********************************************************************************
+MC low cutoff distance is   1.000    Angstrom
+********************************************************************************
+
+Start type
+********************************************************************************
+Initial configuration for box 1 will add molecules to configuration read from file
+ Will read       0  molecules of species   1
+ Will read    4032  molecules of species   2
+ Will read configuration from file graphene.xyz
+ Will insert     500  molecules of species   1
+ Will insert       0  molecules of species   2
+********************************************************************************
+
+Seed info
+********************************************************************************
+The starting seeds are:             1244433             8263663
+********************************************************************************
+
+Move probabilities
+********************************************************************************
+Probability for translation                0.500000
+ Maximum displacement width for species  1 in box  1  is      2.00000
+ Maximum displacement width for species  2 in box  1  is      0.00000
+Probability for rotation                   0.500000
+ The rotational width for the species    1 in box  1   is      0.1745 radians
+ The rotational width for the species    2 in box  1   is      0.0000 radians
+Number of moves is :   2
+********************************************************************************
+
+CBMC info
+********************************************************************************
+Kappa for first fragment insertion          12
+ Orientational bias not supported. Kappa set to zero
+Kappa for dihedral selection                10
+ Cutoff for CBMC for box 1 is         6.50
+********************************************************************************
+
+Simulation length info
+********************************************************************************
+Thermodynamic quantities will be computed every                 1000 Steps     
+Coordinates will be written to file every                       1000 Steps     
+ movie header file is                  Graphene_H2O.H
+ movie_XYZ file is                     Graphene_H2O.xyz
+The simulation will be run for                             5000000 Steps     
+Instantaneous values will be written every                      1000 Steps     
+********************************************************************************
+
+Property info
+********************************************************************************
+Total number of property files to be written is     1   for box 1
+ Maximum number of properties per file is    1
+ Writing the name of the property files and the corresponding property output
+ Property file    1   is  Graphene_H2O.prp
+ Properties output in these files are
+ Energy_Total
+********************************************************************************
+
+Run type
+********************************************************************************
+ The input run type is Equilibration
+ Update frequency is         3000
+********************************************************************************
+
+********************************************************************************
+************************ Begin Cassandra simulation ****************************
+********************************************************************************
+
+Initial configuration
+********************************************************************************
+ Reading configuration for box           1
+ Reading            0  molecules of species            1
+ Reading         4032  molecules of species            2
+ Configurations read successfully
+ Inserting          500 molecules of species            1
+********************************************************************************
+
+Charge neutrality check
+********************************************************************************
+ Species 1 has charge:                  0.00000000
+ Species 2 has charge:                  0.00000000
+
+ Box     1 has charge:                  0.00000000
+********************************************************************************
+
+Compute total energy
+********************************************************************************
+
+ Energy components for box 1     kJ/mol-Extensive
+ ---------------------------------------------------------------------
+ Total system energy                     7768.339
+ Intra molecular energy                     0.000
+   Bond energy                              0.000
+   Bond angle energy                        0.000
+   Dihedral angle energy                    0.000
+   Improper angle energy                    0.000
+   Intra molecule vdw                       0.000
+   Intra molecule q                         0.000
+ Inter molecular energy                  7768.339
+   Inter molecule vdw                   11290.487
+   Long range correction                 -130.645
+   Inter molecule q                    114842.132
+   Reciprocal ewald                      1190.722
+   Self ewald                         -119424.358
+ ---------------------------------------------------------------------
+   Number of reciprocal vectors              4101
+
+********************************************************************************
+
+Run simulation
+********************************************************************************
+                Step       Move   Mol Spc Box  Success  MaxWidth
+                5889  translate         1   1  0.12833   0.51333
+                6112     rotate         1   1  0.81533   0.18326
+               11849  translate         1   1  0.38333   0.39356
+               12175     rotate         1   1  0.82533   0.19242
+               17830  translate         1   1  0.42433   0.33400
+               18166     rotate         1   1  0.81667   0.20204
+               23846  translate         1   1  0.43700   0.29191
+               24176     rotate         1   1  0.80433   0.21215
+               29761  translate         1   1  0.46767   0.27304
+               30260     rotate         1   1  0.78733   0.22275
+               35675  translate         1   1  0.50900   0.27795
+               36299     rotate         1   1  0.78000   0.23389
+               41647  translate         1   1  0.45933   0.25534
+               42322     rotate         1   1  0.77667   0.24559
+               47701  translate         1   1  0.49667   0.25364
+               48342     rotate         1   1  0.75200   0.25786
+               53705  translate         1   1  0.48433   0.24569
+               54269     rotate         1   1  0.74100   0.27076
+               59641  translate         1   1  0.48867   0.24013
+               60408     rotate         1   1  0.73567   0.28430
+               65635  translate         1   1  0.50767   0.24381
+               66391     rotate         1   1  0.69667   0.29851
+               71618  translate         1   1  0.48467   0.23633
+               72375     rotate         1   1  0.70633   0.31344
+               77705  translate         1   1  0.49533   0.23413
+               78327     rotate         1   1  0.68767   0.32911
+               83851  translate         1   1  0.49200   0.23038
+               84126     rotate         1   1  0.66800   0.34556
+               89839  translate         1   1  0.49833   0.22961
+               90166     rotate         1   1  0.65200   0.36284
+               95901  translate         1   1  0.48167   0.22119
+               96100     rotate         1   1  0.64600   0.38098
+              101813  translate         1   1  0.50767   0.22458
+              102155     rotate         1   1  0.62400   0.40003
+              107789  translate         1   1  0.48500   0.21785
+              108194     rotate         1   1  0.59200   0.42003
+              113737  translate         1   1  0.51433   0.22409
+              114263     rotate         1   1  0.59567   0.44104
+              119677  translate         1   1  0.49567   0.22215
+              120354     rotate         1   1  0.55567   0.46309
+              125667  translate         1   1  0.48333   0.21474
+              126295     rotate         1   1  0.53467   0.48624
+              131716  translate         1   1  0.48633   0.20887
+              132243     rotate         1   1  0.52800   0.51055
+              137710  translate         1   1  0.50900   0.21263
+              138307     rotate         1   1  0.49833   0.48503
+              143806  translate         1   1  0.51667   0.21972
+              144197     rotate         1   1  0.51300   0.50928
+              149794  translate         1   1  0.48133   0.21152
+              150220     rotate         1   1  0.49333   0.48381
+              155646  translate         1   1  0.50167   0.21222
+              156363     rotate         1   1  0.52467   0.50800
+              161654  translate         1   1  0.49533   0.21024
+              162313     rotate         1   1  0.50667   0.53340
+              167651  translate         1   1  0.50833   0.21375
+              168340     rotate         1   1  0.46900   0.50673
+              173696  translate         1   1  0.49900   0.21332
+              174288     rotate         1   1  0.50000   0.53207
+              179685  translate         1   1  0.47433   0.20237
+              180350     rotate         1   1  0.46200   0.50547
+              185674  translate         1   1  0.51133   0.20696
+              186363     rotate         1   1  0.48400   0.48019
+              191592  translate         1   1  0.50533   0.20916
+              192430     rotate         1   1  0.51833   0.50420
+              197617  translate         1   1  0.49933   0.20889
+              198393     rotate         1   1  0.50033   0.52941
+              203611  translate         1   1  0.51267   0.21418
+              204394     rotate         1   1  0.48600   0.50294
+              209687  translate         1   1  0.48500   0.20775
+              210303     rotate         1   1  0.50100   0.52809
+              215688  translate         1   1  0.48733   0.20249
+              216331     rotate         1   1  0.48967   0.50169
+              221661  translate         1   1  0.50333   0.20384
+              222351     rotate         1   1  0.51133   0.52677
+              227631  translate         1   1  0.50467   0.20574
+              228414     rotate         1   1  0.48033   0.50043
+              233536  translate         1   1  0.49867   0.20519
+              234463     rotate         1   1  0.50267   0.52545
+              239469  translate         1   1  0.49467   0.20300
+              240567     rotate         1   1  0.46600   0.49918
+              245400  translate         1   1  0.48800   0.19813
+              246591     rotate         1   1  0.51167   0.52414
+              251391  translate         1   1  0.50733   0.20104
+              252595     rotate         1   1  0.47400   0.49793
+              257430  translate         1   1  0.51533   0.20720
+              258569     rotate         1   1  0.50700   0.52283
+              263394  translate         1   1  0.47700   0.19767
+              264641     rotate         1   1  0.47100   0.49669
+              269399  translate         1   1  0.49467   0.19556
+              270579     rotate         1   1  0.50533   0.52152
+              275442  translate         1   1  0.51933   0.20312
+              276572     rotate         1   1  0.48267   0.49545
+              281523  translate         1   1  0.51467   0.20908
+              282453     rotate         1   1  0.49267   0.47067
+              287581  translate         1   1  0.48867   0.20434
+              288413     rotate         1   1  0.51100   0.49421
+              293482  translate         1   1  0.48400   0.19780
+              294539     rotate         1   1  0.49867   0.46950
+              299481  translate         1   1  0.51400   0.20334
+              300545     rotate         1   1  0.52233   0.49297
+              305459  translate         1   1  0.46333   0.18843
+              306533     rotate         1   1  0.47233   0.46832
+              311423  translate         1   1  0.53400   0.20124
+              312527     rotate         1   1  0.50167   0.49174
+              317573  translate         1   1  0.49300   0.19843
+              318402     rotate         1   1  0.49700   0.46715
+              323678  translate         1   1  0.51733   0.20531
+              324302     rotate         1   1  0.50500   0.49051
+              329590  translate         1   1  0.48633   0.19969
+              330408     rotate         1   1  0.48633   0.46599
+              335579  translate         1   1  0.49200   0.19650
+              336403     rotate         1   1  0.52167   0.48928
+              341621  translate         1   1  0.50800   0.19964
+              342404     rotate         1   1  0.49000   0.46482
+              347642  translate         1   1  0.49500   0.19765
+              348368     rotate         1   1  0.52167   0.48806
+              353684  translate         1   1  0.48600   0.19211
+              354297     rotate         1   1  0.50667   0.51246
+              359740  translate         1   1  0.50367   0.19352
+              360292     rotate         1   1  0.47900   0.48684
+              365639  translate         1   1  0.51367   0.19881
+              366361     rotate         1   1  0.49167   0.46250
+              371712  translate         1   1  0.48400   0.19245
+              372270     rotate         1   1  0.49333   0.43937
+              377660  translate         1   1  0.50233   0.19335
+              378324     rotate         1   1  0.52967   0.46134
+              383516  translate         1   1  0.50333   0.19464
+              384494     rotate         1   1  0.50100   0.48441
+              389569  translate         1   1  0.50733   0.19749
+              390424     rotate         1   1  0.49600   0.46019
+              395645  translate         1   1  0.51133   0.20197
+              396377     rotate         1   1  0.51700   0.48320
+              401634  translate         1   1  0.50667   0.20466
+              402334     rotate         1   1  0.50767   0.50736
+              407555  translate         1   1  0.48667   0.19920
+              408443     rotate         1   1  0.48033   0.48199
+              413562  translate         1   1  0.50633   0.20173
+              414444     rotate         1   1  0.49333   0.45789
+              419603  translate         1   1  0.50433   0.20347
+              420433     rotate         1   1  0.50367   0.48079
+              425459  translate         1   1  0.47600   0.19371
+              426498     rotate         1   1  0.50200   0.50483
+              431447  translate         1   1  0.52033   0.20158
+              432550     rotate         1   1  0.48867   0.47958
+              437506  translate         1   1  0.45633   0.18398
+              438554     rotate         1   1  0.49267   0.45560
+              443465  translate         1   1  0.51400   0.18913
+              444544     rotate         1   1  0.51433   0.47838
+              449522  translate         1   1  0.50933   0.19266
+              450507     rotate         1   1  0.50400   0.50230
+              455490  translate         1   1  0.50167   0.19330
+              456547     rotate         1   1  0.50067   0.52742
+              461570  translate         1   1  0.51667   0.19975
+              462441     rotate         1   1  0.47133   0.50105
+              467569  translate         1   1  0.47967   0.19162
+              468404     rotate         1   1  0.48233   0.47600
+              473674  translate         1   1  0.50700   0.19431
+              474307     rotate         1   1  0.48933   0.45220
+              479612  translate         1   1  0.50133   0.19483
+              480398     rotate         1   1  0.50833   0.47481
+              485689  translate         1   1  0.49800   0.19405
+              486355     rotate         1   1  0.49667   0.45107
+              491560  translate         1   1  0.49733   0.19301
+              492381     rotate         1   1  0.51033   0.47362
+              497654  translate         1   1  0.50067   0.19327
+              498411     rotate         1   1  0.50500   0.49730
+              503630  translate         1   1  0.49400   0.19095
+              504378     rotate         1   1  0.46467   0.47243
+              509616  translate         1   1  0.51300   0.19591
+              510389     rotate         1   1  0.50500   0.49606
+              515582  translate         1   1  0.48633   0.19056
+              516358     rotate         1   1  0.47800   0.47125
+              521690  translate         1   1  0.49400   0.18827
+              522316     rotate         1   1  0.49767   0.44769
+              527686  translate         1   1  0.48900   0.18413
+              528323     rotate         1   1  0.51533   0.47008
+              533660  translate         1   1  0.51667   0.19027
+              534348     rotate         1   1  0.51100   0.49358
+              539604  translate         1   1  0.49667   0.18900
+              540379     rotate         1   1  0.49400   0.46890
+              545564  translate         1   1  0.50567   0.19114
+              546446     rotate         1   1  0.50033   0.49235
+              551765  translate         1   1  0.50367   0.19254
+              552222     rotate         1   1  0.49367   0.46773
+              557780  translate         1   1  0.51167   0.19704
+              558262     rotate         1   1  0.49867   0.44434
+              563743  translate         1   1  0.48967   0.19296
+              564261     rotate         1   1  0.50200   0.46656
+              569702  translate         1   1  0.50933   0.19657
+              570291     rotate         1   1  0.50800   0.48989
+              575798  translate         1   1  0.49933   0.19630
+              576217     rotate         1   1  0.49033   0.46539
+              581757  translate         1   1  0.49700   0.19513
+              582272     rotate         1   1  0.48667   0.44212
+              587688  translate         1   1  0.49433   0.19291
+              588342     rotate         1   1  0.51933   0.46423
+              593762  translate         1   1  0.48567   0.18738
+              594237     rotate         1   1  0.51533   0.48744
+              599593  translate         1   1  0.51133   0.19163
+              600467     rotate         1   1  0.48833   0.46307
+              605640  translate         1   1  0.50267   0.19265
+              606360     rotate         1   1  0.49067   0.43992
+              611633  translate         1   1  0.49800   0.19188
+              612330     rotate         1   1  0.51767   0.46191
+              617663  translate         1   1  0.49633   0.19048
+              618311     rotate         1   1  0.49800   0.43882
+              623597  translate         1   1  0.49867   0.18997
+              624383     rotate         1   1  0.51000   0.46076
+              629593  translate         1   1  0.50633   0.19237
+              630397     rotate         1   1  0.51633   0.48379
+              635608  translate         1   1  0.48600   0.18699
+              636407     rotate         1   1  0.47333   0.45960
+              641602  translate         1   1  0.51300   0.19185
+              642382     rotate         1   1  0.49967   0.43662
+              647533  translate         1   1  0.48233   0.18507
+              648510     rotate         1   1  0.51600   0.45846
+              653466  translate         1   1  0.51133   0.18927
+              654495     rotate         1   1  0.50233   0.48138
+              659376  translate         1   1  0.51267   0.19406
+              660640     rotate         1   1  0.48833   0.45731
+              665283  translate         1   1  0.48800   0.18940
+              666692     rotate         1   1  0.50200   0.48017
+              671420  translate         1   1  0.51400   0.19471
+              672635     rotate         1   1  0.47867   0.45617
+              677342  translate         1   1  0.50333   0.19600
+              678654     rotate         1   1  0.49667   0.43336
+              683449  translate         1   1  0.48633   0.19065
+              684528     rotate         1   1  0.51867   0.45503
+              689522  translate         1   1  0.49467   0.18861
+              690465     rotate         1   1  0.50867   0.47778
+              695481  translate         1   1  0.50433   0.19025
+              696509     rotate         1   1  0.49600   0.45389
+              701425  translate         1   1  0.48133   0.18315
+              702515     rotate         1   1  0.52367   0.47658
+              707477  translate         1   1  0.49833   0.18253
+              708532     rotate         1   1  0.48400   0.45275
+              713397  translate         1   1  0.49867   0.18205
+              714579     rotate         1   1  0.51300   0.47539
+              719485  translate         1   1  0.51633   0.18799
+              720563     rotate         1   1  0.50067   0.49916
+              725367  translate         1   1  0.49267   0.18524
+              726657     rotate         1   1  0.47800   0.47420
+              731479  translate         1   1  0.50733   0.18795
+              732474     rotate         1   1  0.48800   0.45049
+              737450  translate         1   1  0.50133   0.18846
+              738564     rotate         1   1  0.51100   0.47302
+              743473  translate         1   1  0.51667   0.19474
+              744506     rotate         1   1  0.48567   0.44937
+              749523  translate         1   1  0.48500   0.18890
+              750445     rotate         1   1  0.50200   0.47183
+              755499  translate         1   1  0.50700   0.19154
+              756510     rotate         1   1  0.50267   0.49543
+              761517  translate         1   1  0.49900   0.19116
+              762473     rotate         1   1  0.47167   0.47065
+              767557  translate         1   1  0.49500   0.18925
+              768426     rotate         1   1  0.49233   0.44712
+              773429  translate         1   1  0.49700   0.18811
+              774516     rotate         1   1  0.50633   0.46948
+              779445  translate         1   1  0.49267   0.18535
+              780551     rotate         1   1  0.49900   0.44600
+              785515  translate         1   1  0.49967   0.18523
+              786507     rotate         1   1  0.49667   0.42370
+              791492  translate         1   1  0.49867   0.18473
+              792496     rotate         1   1  0.53500   0.44489
+              797525  translate         1   1  0.48967   0.18092
+              798494     rotate         1   1  0.51467   0.46713
+              803540  translate         1   1  0.50233   0.18176
+              804451     rotate         1   1  0.50433   0.49049
+              809482  translate         1   1  0.50633   0.18406
+              810533     rotate         1   1  0.47700   0.46597
+              815517  translate         1   1  0.51667   0.19020
+              816465     rotate         1   1  0.49767   0.44267
+              821496  translate         1   1  0.49033   0.18652
+              822479     rotate         1   1  0.50167   0.46480
+              827601  translate         1   1  0.49200   0.18354
+              828382     rotate         1   1  0.48267   0.44156
+              833613  translate         1   1  0.51700   0.18978
+              834389     rotate         1   1  0.52200   0.46364
+              839632  translate         1   1  0.50200   0.19054
+              840350     rotate         1   1  0.49667   0.44046
+              845621  translate         1   1  0.50667   0.19308
+              846385     rotate         1   1  0.53367   0.46248
+              851576  translate         1   1  0.49700   0.19192
+              852445     rotate         1   1  0.50533   0.48560
+              857606  translate         1   1  0.51133   0.19627
+              858424     rotate         1   1  0.47467   0.46132
+              863573  translate         1   1  0.49200   0.19313
+              864434     rotate         1   1  0.51267   0.48439
+              869526  translate         1   1  0.51767   0.19995
+              870476     rotate         1   1  0.50000   0.50861
+              875419  translate         1   1  0.49267   0.19702
+              876585     rotate         1   1  0.47167   0.48318
+              881397  translate         1   1  0.47267   0.18625
+              882574     rotate         1   1  0.48733   0.45902
+              887434  translate         1   1  0.49000   0.18252
+              888582     rotate         1   1  0.49433   0.43607
+              893379  translate         1   1  0.52767   0.19262
+              894591     rotate         1   1  0.51100   0.45787
+              899441  translate         1   1  0.49333   0.19005
+              900550     rotate         1   1  0.50533   0.48077
+              905546  translate         1   1  0.49533   0.18828
+              906453     rotate         1   1  0.49200   0.45673
+              911598  translate         1   1  0.49800   0.18753
+              912430     rotate         1   1  0.49967   0.43389
+              917703  translate         1   1  0.50000   0.18753
+              918319     rotate         1   1  0.52933   0.45559
+              923813  translate         1   1  0.49633   0.18615
+              924166     rotate         1   1  0.49233   0.43281
+              929704  translate         1   1  0.49933   0.18590
+              930307     rotate         1   1  0.51267   0.45445
+              935521  translate         1   1  0.50667   0.18838
+              936506     rotate         1   1  0.50100   0.47717
+              941448  translate         1   1  0.51100   0.19253
+              942579     rotate         1   1  0.49300   0.45331
+              947326  translate         1   1  0.48433   0.18649
+              948711     rotate         1   1  0.49867   0.43065
+              953372  translate         1   1  0.49733   0.18550
+              954597     rotate         1   1  0.53267   0.45218
+              959403  translate         1   1  0.51467   0.19094
+              960631     rotate         1   1  0.50133   0.47479
+              965416  translate         1   1  0.49300   0.18827
+              966612     rotate         1   1  0.46867   0.45105
+              971376  translate         1   1  0.50433   0.18990
+              972622     rotate         1   1  0.52133   0.47360
+              977368  translate         1   1  0.48567   0.18446
+              978663     rotate         1   1  0.48767   0.44992
+              983342  translate         1   1  0.52333   0.19306
+              984693     rotate         1   1  0.50533   0.47242
+              989216  translate         1   1  0.48900   0.18882
+              990814     rotate         1   1  0.50700   0.49604
+              995167  translate         1   1  0.49067   0.18529
+              996747     rotate         1   1  0.48433   0.47123
+             1001221  translate         1   1  0.49267   0.18257
+             1002816     rotate         1   1  0.50167   0.49480
+             1007168  translate         1   1  0.50433   0.18416
+             1008866     rotate         1   1  0.48533   0.47006
+             1013070  translate         1   1  0.49933   0.18391
+             1014996     rotate         1   1  0.49133   0.44655
+             1019110  translate         1   1  0.51900   0.19090
+             1020835     rotate         1   1  0.52200   0.46888
+             1025189  translate         1   1  0.50233   0.19179
+             1026799     rotate         1   1  0.49400   0.44544
+             1031253  translate         1   1  0.48467   0.18591
+             1032728     rotate         1   1  0.51767   0.46771
+             1037300  translate         1   1  0.51000   0.18963
+             1038696     rotate         1   1  0.48967   0.44432
+             1043295  translate         1   1  0.49467   0.18760
+             1044710     rotate         1   1  0.52100   0.46654
+             1049189  translate         1   1  0.49600   0.18610
+             1050833     rotate         1   1  0.51233   0.48987
+             1055234  translate         1   1  0.50433   0.18772
+             1056772     rotate         1   1  0.48700   0.46537
+             1061160  translate         1   1  0.48967   0.18384
+             1062843     rotate         1   1  0.48733   0.44210
+             1067168  translate         1   1  0.49933   0.18359
+             1068803     rotate         1   1  0.52100   0.46421
+             1073143  translate         1   1  0.51600   0.18947
+             1074842     rotate         1   1  0.50133   0.48742
+             1079094  translate         1   1  0.49600   0.18795
+             1080891     rotate         1   1  0.48167   0.46305
+             1085098  translate         1   1  0.48433   0.18206
+             1086968     rotate         1   1  0.50367   0.48620
+             1090943  translate         1   1  0.51133   0.18619
+             1093060     rotate         1   1  0.46900   0.46189
+             1097003  translate         1   1  0.48600   0.18098
+             1098988     rotate         1   1  0.50300   0.48499
+             1103060  translate         1   1  0.49700   0.17989
+             1105015     rotate         1   1  0.47067   0.46074
+             1108930  translate         1   1  0.50767   0.18265
+             1111082     rotate         1   1  0.48333   0.43770
+             1114853  translate         1   1  0.51533   0.18825
+             1117108     rotate         1   1  0.51100   0.45958
+             1120826  translate         1   1  0.49667   0.18699
+             1123157     rotate         1   1  0.49200   0.43661
+             1126921  translate         1   1  0.49833   0.18637
+             1129138     rotate         1   1  0.53067   0.45844
+             1132883  translate         1   1  0.50067   0.18662
+             1135119     rotate         1   1  0.49433   0.43551
+             1138925  translate         1   1  0.50433   0.18824
+             1141087     rotate         1   1  0.50667   0.45729
+             1144904  translate         1   1  0.48067   0.18096
+             1147081     rotate         1   1  0.49100   0.43443
+             1150828  translate         1   1  0.50433   0.18253
+             1153223     rotate         1   1  0.52233   0.45615
+             1156770  translate         1   1  0.50167   0.18313
+             1159236     rotate         1   1  0.49167   0.43334
+             1162715  translate         1   1  0.50467   0.18484
+             1165262     rotate         1   1  0.50900   0.45501
+             1168708  translate         1   1  0.49300   0.18226
+             1171272     rotate         1   1  0.48533   0.43226
+             1174702  translate         1   1  0.51667   0.18833
+             1177286     rotate         1   1  0.51933   0.45387
+             1180629  translate         1   1  0.50667   0.19084
+             1183401     rotate         1   1  0.51700   0.47656
+             1186666  translate         1   1  0.49700   0.18970
+             1189324     rotate         1   1  0.49567   0.45273
+             1192657  translate         1   1  0.48467   0.18388
+             1195361     rotate         1   1  0.50467   0.47537
+             1198645  translate         1   1  0.51300   0.18866
+             1201385     rotate         1   1  0.50300   0.49914
+             1204749  translate         1   1  0.48400   0.18262
+             1207267     rotate         1   1  0.46167   0.47418
+             1210745  translate         1   1  0.51400   0.18774
+             1213177     rotate         1   1  0.48800   0.45047
+             1216823  translate         1   1  0.49733   0.18674
+             1219115     rotate         1   1  0.52167   0.47300
+             1222849  translate         1   1  0.50667   0.18923
+             1225184     rotate         1   1  0.47467   0.44935
+             1228824  translate         1   1  0.49300   0.18658
+             1231212     rotate         1   1  0.50100   0.47181
+             1234764  translate         1   1  0.49767   0.18571
+             1237155     rotate         1   1  0.48633   0.44822
+             1240915  translate         1   1  0.50400   0.18719
+             1243066     rotate         1   1  0.49233   0.42581
+             1246925  translate         1   1  0.50567   0.18931
+             1249038     rotate         1   1  0.51533   0.44710
+             1252971  translate         1   1  0.48267   0.18275
+             1255048     rotate         1   1  0.51567   0.46946
+             1258941  translate         1   1  0.52133   0.19055
+             1261009     rotate         1   1  0.48933   0.44599
+             1264957  translate         1   1  0.49133   0.18724
+             1267058     rotate         1   1  0.50267   0.46828
+             1270873  translate         1   1  0.50900   0.19062
+             1273130     rotate         1   1  0.49100   0.44487
+             1276812  translate         1   1  0.48533   0.18502
+             1279211     rotate         1   1  0.50600   0.46711
+             1282729  translate         1   1  0.49233   0.18219
+             1285314     rotate         1   1  0.48867   0.44376
+             1288725  translate         1   1  0.51500   0.18765
+             1291262     rotate         1   1  0.51800   0.46595
+             1294707  translate         1   1  0.48033   0.18027
+             1297290     rotate         1   1  0.49033   0.44265
+             1300732  translate         1   1  0.50800   0.18316
+             1303210     rotate         1   1  0.49467   0.42052
+             1306727  translate         1   1  0.50633   0.18548
+             1309283     rotate         1   1  0.52367   0.44154
+             1312749  translate         1   1  0.47367   0.17571
+             1315264     rotate         1   1  0.49900   0.41947
+             1318728  translate         1   1  0.52700   0.18520
+             1321227     rotate         1   1  0.52367   0.44044
+             1324728  translate         1   1  0.51100   0.18927
+             1327263     rotate         1   1  0.51400   0.46246
+             1330804  translate         1   1  0.48100   0.18208
+             1333254     rotate         1   1  0.48633   0.43934
+             1336699  translate         1   1  0.51267   0.18669
+             1339318     rotate         1   1  0.50767   0.46130
+             1342687  translate         1   1  0.48533   0.18121
+             1345361     rotate         1   1  0.47433   0.43824
+             1348660  translate         1   1  0.50967   0.18472
+             1351318     rotate         1   1  0.52233   0.46015
+             1354549  translate         1   1  0.48867   0.18053
+             1357469     rotate         1   1  0.47800   0.43714
+             1360507  translate         1   1  0.51233   0.18498
+             1363439     rotate         1   1  0.50400   0.45900
+             1366591  translate         1   1  0.49767   0.18412
+             1369331     rotate         1   1  0.49700   0.43605
+             1372664  translate         1   1  0.49567   0.18252
+             1375330     rotate         1   1  0.50600   0.45785
+             1378722  translate         1   1  0.49800   0.18179
+             1381180     rotate         1   1  0.48300   0.43496
+             1384776  translate         1   1  0.49767   0.18095
+             1387185     rotate         1   1  0.49567   0.41321
+             1390621  translate         1   1  0.51233   0.18541
+             1393367     rotate         1   1  0.52500   0.43387
+             1396651  translate         1   1  0.50600   0.18763
+             1399240     rotate         1   1  0.51767   0.45557
+             1402743  translate         1   1  0.49267   0.18488
+             1405244     rotate         1   1  0.50133   0.47834
+             1408774  translate         1   1  0.50167   0.18550
+             1411257     rotate         1   1  0.48300   0.45443
+             1414742  translate         1   1  0.51100   0.18958
+             1417279     rotate         1   1  0.50233   0.47715
+             1420758  translate         1   1  0.47767   0.18111
+             1423290     rotate         1   1  0.48000   0.45329
+             1426758  translate         1   1  0.51000   0.18473
+             1429238     rotate         1   1  0.48767   0.43063
+             1432726  translate         1   1  0.48600   0.17956
+             1435279     rotate         1   1  0.51300   0.45216
+             1438788  translate         1   1  0.49967   0.17944
+             1441208     rotate         1   1  0.49567   0.42955
+             1444749  translate         1   1  0.51133   0.18351
+             1447296     rotate         1   1  0.50667   0.45103
+             1450744  translate         1   1  0.47633   0.17482
+             1453268     rotate         1   1  0.49633   0.42848
+             1456717  translate         1   1  0.49900   0.17447
+             1459291     rotate         1   1  0.52400   0.44990
+             1462652  translate         1   1  0.52033   0.18157
+             1465357     rotate         1   1  0.49433   0.42741
+             1468535  translate         1   1  0.50867   0.18472
+             1471496     rotate         1   1  0.52233   0.44878
+             1474528  translate         1   1  0.48000   0.17733
+             1477531     rotate         1   1  0.49633   0.42634
+             1480433  translate         1   1  0.49900   0.17697
+             1483669     rotate         1   1  0.52167   0.44765
+             1486339  translate         1   1  0.51467   0.18216
+             1489683     rotate         1   1  0.49900   0.42527
+             1492263  translate         1   1  0.50000   0.18216
+             1495746     rotate         1   1  0.50100   0.44653
+             1498333  translate         1   1  0.49400   0.17998
+             1501652     rotate         1   1  0.50433   0.46886
+             1504403  translate         1   1  0.51000   0.18358
+             1507690     rotate         1   1  0.48833   0.44542
+             1510448  translate         1   1  0.50833   0.18664
+             1513555     rotate         1   1  0.50300   0.46769
+             1516506  translate         1   1  0.49933   0.18639
+             1519495     rotate         1   1  0.49900   0.44430
+             1522497  translate         1   1  0.48767   0.18179
+             1525432     rotate         1   1  0.49633   0.42209
+             1528671  translate         1   1  0.52367   0.19040
+             1531388     rotate         1   1  0.50067   0.44319
+             1534588  translate         1   1  0.48633   0.18519
+             1537261     rotate         1   1  0.51833   0.46535
+             1540762  translate         1   1  0.50200   0.18593
+             1543192     rotate         1   1  0.48200   0.44209
+             1546865  translate         1   1  0.51133   0.19015
+             1549087     rotate         1   1  0.50967   0.46419
+             1552894  translate         1   1  0.49500   0.18825
+             1555194     rotate         1   1  0.47000   0.44098
+             1558856  translate         1   1  0.48467   0.18247
+             1561161     rotate         1   1  0.50067   0.46303
+             1564817  translate         1   1  0.49433   0.18040
+             1567081     rotate         1   1  0.49133   0.43988
+             1570922  translate         1   1  0.50767   0.18317
+             1573145     rotate         1   1  0.49067   0.41788
+             1576906  translate         1   1  0.50733   0.18586
+             1579110     rotate         1   1  0.52500   0.43878
+             1582978  translate         1   1  0.50400   0.18734
+             1584970     rotate         1   1  0.50367   0.46072
+             1589106  translate         1   1  0.49500   0.18547
+             1590920     rotate         1   1  0.50133   0.48375
+             1594947  translate         1   1  0.50633   0.18782
+             1597058     rotate         1   1  0.46700   0.45957
+             1600975  translate         1   1  0.50033   0.18794
+             1602964     rotate         1   1  0.49700   0.43659
+             1607121  translate         1   1  0.50367   0.18932
+             1608888     rotate         1   1  0.51933   0.45842
+             1613005  translate         1   1  0.49433   0.18718
+             1615009     rotate         1   1  0.48567   0.43550
+             1618963  translate         1   1  0.48433   0.18131
+             1621069     rotate         1   1  0.52100   0.45727
+             1625057  translate         1   1  0.49967   0.18119
+             1626963     rotate         1   1  0.50767   0.48013
+             1631049  translate         1   1  0.51500   0.18663
+             1632924     rotate         1   1  0.48500   0.45613
+             1637092  translate         1   1  0.49500   0.18476
+             1638955     rotate         1   1  0.50167   0.47893
+             1642992  translate         1   1  0.49533   0.18304
+             1645075     rotate         1   1  0.45800   0.45499
+             1649046  translate         1   1  0.50567   0.18511
+             1650975     rotate         1   1  0.48567   0.43224
+             1654957  translate         1   1  0.50767   0.18795
+             1657091     rotate         1   1  0.50800   0.45385
+             1660903  translate         1   1  0.48300   0.18156
+             1663139     rotate         1   1  0.49433   0.43116
+             1666859  translate         1   1  0.47900   0.17393
+             1669071     rotate         1   1  0.50867   0.45272
+             1672928  translate         1   1  0.51533   0.17927
+             1675043     rotate         1   1  0.51667   0.47535
+             1679021  translate         1   1  0.50767   0.18202
+             1680933     rotate         1   1  0.47833   0.45158
+             1685053  translate         1   1  0.50933   0.18541
+             1686946     rotate         1   1  0.48700   0.42900
+             1690997  translate         1   1  0.49000   0.18171
+             1692977     rotate         1   1  0.52100   0.45045
+             1697094  translate         1   1  0.49467   0.17977
+             1698895     rotate         1   1  0.49533   0.42793
+             1703086  translate         1   1  0.51067   0.18360
+             1704902     rotate         1   1  0.51400   0.44933
+             1709094  translate         1   1  0.49533   0.18189
+             1710897     rotate         1   1  0.50967   0.47179
+             1715052  translate         1   1  0.49667   0.18068
+             1717015     rotate         1   1  0.48400   0.44821
+             1720920  translate         1   1  0.50600   0.18284
+             1723068     rotate         1   1  0.48600   0.42579
+             1726925  translate         1   1  0.49933   0.18260
+             1729062     rotate         1   1  0.52333   0.44708
+             1733022  translate         1   1  0.51000   0.18625
+             1734935     rotate         1   1  0.51300   0.46944
+             1739109  translate         1   1  0.49100   0.18290
+             1740928     rotate         1   1  0.48300   0.44597
+             1745071  translate         1   1  0.51067   0.18680
+             1746871     rotate         1   1  0.49933   0.42367
+             1751118  translate         1   1  0.48400   0.18082
+             1752827     rotate         1   1  0.51033   0.44485
+             1757221  translate         1   1  0.50767   0.18360
+             1758734     rotate         1   1  0.49933   0.42261
+             1763100  translate         1   1  0.51600   0.18947
+             1764813     rotate         1   1  0.51333   0.44374
+             1769179  translate         1   1  0.47567   0.18025
+             1770896     rotate         1   1  0.49900   0.42155
+             1775051  translate         1   1  0.49333   0.17785
+             1776922     rotate         1   1  0.51300   0.44263
+             1781122  translate         1   1  0.51967   0.18484
+             1782859     rotate         1   1  0.49867   0.42050
+             1787117  translate         1   1  0.48933   0.18090
+             1788860     rotate         1   1  0.50367   0.44152
+             1793112  translate         1   1  0.51500   0.18633
+             1794885     rotate         1   1  0.50333   0.46360
+             1799131  translate         1   1  0.51000   0.19005
+             1800873     rotate         1   1  0.50033   0.48678
+             1805193  translate         1   1  0.49333   0.18752
+             1806786     rotate         1   1  0.49567   0.46244
+             1811239  translate         1   1  0.49467   0.18552
+             1812749     rotate         1   1  0.49067   0.43932
+             1817209  translate         1   1  0.50333   0.18676
+             1818776     rotate         1   1  0.49267   0.41735
+             1823086  translate         1   1  0.50900   0.19012
+             1824898     rotate         1   1  0.50067   0.43822
+             1829179  translate         1   1  0.47767   0.18163
+             1830769     rotate         1   1  0.49567   0.41631
+             1835242  translate         1   1  0.49767   0.18078
+             1836736     rotate         1   1  0.53133   0.43713
+             1841326  translate         1   1  0.52233   0.18885
+             1842701     rotate         1   1  0.50133   0.45898
+             1847275  translate         1   1  0.45633   0.17236
+             1848677     rotate         1   1  0.49733   0.43603
+             1853222  translate         1   1  0.51933   0.17902
+             1854732     rotate         1   1  0.51033   0.45783
+             1859309  translate         1   1  0.51433   0.18416
+             1860696     rotate         1   1  0.51633   0.48073
+             1865324  translate         1   1  0.49700   0.18305
+             1866691     rotate         1   1  0.48700   0.45669
+             1871277  translate         1   1  0.50800   0.18598
+             1872721     rotate         1   1  0.49767   0.43385
+             1877348  translate         1   1  0.49667   0.18474
+             1878671     rotate         1   1  0.50400   0.45555
+             1883308  translate         1   1  0.50100   0.18511
+             1884718     rotate         1   1  0.48233   0.43277
+             1889276  translate         1   1  0.50400   0.18659
+             1890750     rotate         1   1  0.50667   0.45441
+             1895180  translate         1   1  0.47367   0.17676
+             1896892     rotate         1   1  0.49767   0.43169
+             1901029  translate         1   1  0.52200   0.18454
+             1902999     rotate         1   1  0.51267   0.45327
+             1907014  translate         1   1  0.49300   0.18196
+             1908965     rotate         1   1  0.48167   0.43061
+             1913055  translate         1   1  0.49300   0.17941
+             1914887     rotate         1   1  0.50167   0.45214
+             1919034  translate         1   1  0.50333   0.18061
+             1921007     rotate         1   1  0.49433   0.42953
+             1925082  translate         1   1  0.53267   0.19241
+             1926886     rotate         1   1  0.52300   0.45101
+             1931106  translate         1   1  0.46967   0.18073
+             1933006     rotate         1   1  0.50633   0.47356
+             1937113  translate         1   1  0.50200   0.18146
+             1938751     rotate         1   1  0.48467   0.44988
+             1943154  translate         1   1  0.50500   0.18327
+             1944843     rotate         1   1  0.50667   0.47238
+             1949191  translate         1   1  0.48233   0.17680
+             1950856     rotate         1   1  0.48267   0.44876
+             1955154  translate         1   1  0.51533   0.18222
+             1956861     rotate         1   1  0.48600   0.42632
+             1961142  translate         1   1  0.50400   0.18367
+             1962808     rotate         1   1  0.50800   0.44764
+             1967092  translate         1   1  0.47267   0.17363
+             1968852     rotate         1   1  0.50367   0.47002
+             1973122  translate         1   1  0.50467   0.17525
+             1974952     rotate         1   1  0.47533   0.44652
+             1979021  translate         1   1  0.51233   0.17958
+             1980930     rotate         1   1  0.49600   0.42419
+             1985056  translate         1   1  0.49833   0.17898
+             1986890     rotate         1   1  0.50700   0.44540
+             1991069  translate         1   1  0.50200   0.17969
+             1992869     rotate         1   1  0.49400   0.42313
+             1997179  translate         1   1  0.50367   0.18101
+             1998818     rotate         1   1  0.52867   0.44429
+             2003239  translate         1   1  0.50033   0.18113
+             2004811     rotate         1   1  0.50300   0.46650
+             2009266  translate         1   1  0.50633   0.18343
+             2010693     rotate         1   1  0.50100   0.48983
+             2015380  translate         1   1  0.48767   0.17890
+             2016657     rotate         1   1  0.47633   0.46533
+             2021334  translate         1   1  0.50867   0.18200
+             2022754     rotate         1   1  0.48333   0.44207
+             2027331  translate         1   1  0.50000   0.18200
+             2028685     rotate         1   1  0.50067   0.46417
+             2033212  translate         1   1  0.49733   0.18103
+             2034842     rotate         1   1  0.48567   0.44096
+             2039300  translate         1   1  0.49667   0.17983
+             2040715     rotate         1   1  0.50933   0.46301
+             2045167  translate         1   1  0.49500   0.17803
+             2046849     rotate         1   1  0.48300   0.43986
+             2051050  translate         1   1  0.50567   0.18005
+             2052916     rotate         1   1  0.50933   0.46185
+             2057036  translate         1   1  0.49900   0.17969
+             2058986     rotate         1   1  0.48567   0.43876
+             2063078  translate         1   1  0.50933   0.18304
+             2064928     rotate         1   1  0.51200   0.46070
+             2069130  translate         1   1  0.49067   0.17962
+             2070898     rotate         1   1  0.50133   0.48373
+             2075224  translate         1   1  0.50333   0.18082
+             2076760     rotate         1   1  0.48067   0.45955
+             2081251  translate         1   1  0.50200   0.18154
+             2082746     rotate         1   1  0.49433   0.43657
+             2087350  translate         1   1  0.49033   0.17803
+             2088678     rotate         1   1  0.49833   0.41474
+             2093342  translate         1   1  0.49767   0.17720
+             2094686     rotate         1   1  0.51833   0.43548
+             2099225  translate         1   1  0.49433   0.17519
+             2100786     rotate         1   1  0.49533   0.41370
+             2105105  translate         1   1  0.49867   0.17473
+             2106871     rotate         1   1  0.53100   0.43439
+             2111219  translate         1   1  0.50400   0.17613
+             2112761     rotate         1   1  0.50333   0.45611
+             2117135  translate         1   1  0.50000   0.17613
+             2118838     rotate         1   1  0.49333   0.43330
+             2123159  translate         1   1  0.49867   0.17566
+             2124841     rotate         1   1  0.49167   0.41164
+             2129181  translate         1   1  0.50667   0.17800
+             2130841     rotate         1   1  0.53533   0.43222
+             2135297  translate         1   1  0.49633   0.17669
+             2136698     rotate         1   1  0.51900   0.45383
+             2141301  translate         1   1  0.50400   0.17811
+             2142673     rotate         1   1  0.50700   0.47652
+             2147479  translate         1   1  0.49467   0.17621
+             2148477     rotate         1   1  0.48733   0.45270
+             2153407  translate         1   1  0.49700   0.17515
+             2154629     rotate         1   1  0.48400   0.43006
+             2159353  translate         1   1  0.50700   0.17760
+             2160674     rotate         1   1  0.51467   0.45156
+             2165164  translate         1   1  0.51200   0.18186
+             2166798     rotate         1   1  0.49933   0.42899
+             2171135  translate         1   1  0.51033   0.18562
+             2172870     rotate         1   1  0.50800   0.45044
+             2177173  translate         1   1  0.48867   0.18141
+             2178852     rotate         1   1  0.50033   0.47296
+             2183157  translate         1   1  0.48567   0.17621
+             2184887     rotate         1   1  0.47100   0.44931
+             2189142  translate         1   1  0.50933   0.17950
+             2190824     rotate         1   1  0.49633   0.42684
+             2195238  translate         1   1  0.49167   0.17651
+             2196794     rotate         1   1  0.52833   0.44819
+             2201113  translate         1   1  0.51933   0.18334
+             2202888     rotate         1   1  0.48467   0.42578
+             2207220  translate         1   1  0.48233   0.17686
+             2208741     rotate         1   1  0.51867   0.44707
+             2213259  translate         1   1  0.51533   0.18228
+             2214800     rotate         1   1  0.48900   0.42471
+             2219200  translate         1   1  0.49933   0.18204
+             2220852     rotate         1   1  0.52200   0.44595
+             2225295  translate         1   1  0.49900   0.18168
+             2226755     rotate         1   1  0.49000   0.42365
+             2231192  translate         1   1  0.48700   0.17695
+             2232745     rotate         1   1  0.52000   0.44483
+             2237234  translate         1   1  0.50000   0.17695
+             2238811     rotate         1   1  0.51233   0.46707
+             2243152  translate         1   1  0.51467   0.18214
+             2244799     rotate         1   1  0.48300   0.44372
+             2249337  translate         1   1  0.48967   0.17838
+             2250641     rotate         1   1  0.50367   0.46591
+             2255398  translate         1   1  0.51500   0.18373
+             2256638     rotate         1   1  0.47433   0.44261
+             2261324  translate         1   1  0.48667   0.17883
+             2262707     rotate         1   1  0.51467   0.46474
+             2267362  translate         1   1  0.49033   0.17537
+             2268657     rotate         1   1  0.48667   0.44151
+             2273350  translate         1   1  0.52467   0.18402
+             2274614     rotate         1   1  0.50100   0.46358
+             2279404  translate         1   1  0.50233   0.18488
+             2280595     rotate         1   1  0.48367   0.44040
+             2285546  translate         1   1  0.47667   0.17626
+             2286406     rotate         1   1  0.51567   0.46242
+             2291633  translate         1   1  0.49833   0.17567
+             2292400     rotate         1   1  0.48767   0.43930
+             2297524  translate         1   1  0.51967   0.18258
+             2298397     rotate         1   1  0.48933   0.41734
+             2303650  translate         1   1  0.48867   0.17844
+             2304337     rotate         1   1  0.52367   0.43820
+             2309649  translate         1   1  0.49667   0.17725
+             2310330     rotate         1   1  0.50667   0.46011
+             2315845  translate         1   1  0.49733   0.17630
+             2316185     rotate         1   1  0.48433   0.43711
+             2321858  translate         1   1  0.52100   0.18371
+             2322160     rotate         1   1  0.52433   0.45896
+             2327967  translate         1   1  0.47467   0.17440
+             2328025     rotate         1   1  0.48300   0.43601
+             2333896  translate         1   1  0.50833   0.17731
+             2334098     rotate         1   1  0.49833   0.41421
+             2339912  translate         1   1  0.52400   0.18582
+             2340096     rotate         1   1  0.52600   0.43492
+             2345933  translate         1   1  0.48367   0.17975
+             2346066     rotate         1   1  0.49567   0.41318
+             2351930  translate         1   1  0.49367   0.17747
+             2352058     rotate         1   1  0.52067   0.43384
+             2357895  translate         1   1  0.49500   0.17570
+             2358111     rotate         1   1  0.50067   0.45553
+             2363970     rotate         1   1  0.50067   0.47831
+             2364033  translate         1   1  0.49967   0.17558
+             2369975  translate         1   1  0.51833   0.18202
+             2370029     rotate         1   1  0.48167   0.45439
+             2375971  translate         1   1  0.47933   0.17449
+             2376037     rotate         1   1  0.49533   0.43167
+             2381947  translate         1   1  0.48500   0.16926
+             2382061     rotate         1   1  0.49333   0.41009
+             2387991  translate         1   1  0.50733   0.17174
+             2388010     rotate         1   1  0.50667   0.43059
+             2393979  translate         1   1  0.50700   0.17415
+             2394014     rotate         1   1  0.48800   0.40906
+             2399944     rotate         1   1  0.52733   0.42951
+             2400064  translate         1   1  0.52567   0.18309
+             2405904  translate         1   1  0.49867   0.18260
+             2406089     rotate         1   1  0.51633   0.45099
+             2411946     rotate         1   1  0.48267   0.42844
+             2412064  translate         1   1  0.49500   0.18077
+             2417888     rotate         1   1  0.49867   0.40702
+             2418107  translate         1   1  0.48267   0.17450
+             2423781     rotate         1   1  0.53000   0.42737
+             2424245  translate         1   1  0.50333   0.17567
+             2429664     rotate         1   1  0.50967   0.44874
+             2430281  translate         1   1  0.47333   0.16630
+             2435750     rotate         1   1  0.49700   0.42630
+             2436236  translate         1   1  0.52400   0.17428
+             2441611     rotate         1   1  0.50633   0.44762
+             2442375  translate         1   1  0.50967   0.17765
+             2447671     rotate         1   1  0.48100   0.42524
+             2448304  translate         1   1  0.50100   0.17801
+             2453527     rotate         1   1  0.52600   0.44650
+             2454462  translate         1   1  0.49700   0.17694
+             2459474     rotate         1   1  0.48333   0.42417
+             2460535  translate         1   1  0.49233   0.17423
+             2465458     rotate         1   1  0.49567   0.40296
+             2466542  translate         1   1  0.49933   0.17399
+             2471450     rotate         1   1  0.52933   0.42311
+             2472535  translate         1   1  0.51933   0.18072
+             2477499     rotate         1   1  0.52333   0.44427
+             2478472  translate         1   1  0.48733   0.17614
+             2483435     rotate         1   1  0.48600   0.42205
+             2484562  translate         1   1  0.51200   0.18037
+             2489441     rotate         1   1  0.51267   0.44316
+             2490602  translate         1   1  0.50800   0.18326
+             2495443     rotate         1   1  0.50567   0.46531
+             2496557  translate         1   1  0.49300   0.18069
+             2501366     rotate         1   1  0.47867   0.44205
+             2502629  translate         1   1  0.49000   0.17708
+             2507341     rotate         1   1  0.49500   0.41995
+             2508543  translate         1   1  0.50000   0.17708
+             2513445     rotate         1   1  0.50567   0.44094
+             2514541  translate         1   1  0.51433   0.18215
+             2519314     rotate         1   1  0.49433   0.41890
+             2520684  translate         1   1  0.49500   0.18033
+             2525253     rotate         1   1  0.52000   0.43984
+             2526729  translate         1   1  0.49167   0.17733
+             2531199     rotate         1   1  0.50767   0.46183
+             2532841  translate         1   1  0.50767   0.18004
+             2537231     rotate         1   1  0.50167   0.48493
+             2538804  translate         1   1  0.50133   0.18052
+             2543184     rotate         1   1  0.46867   0.46068
+             2544794  translate         1   1  0.49900   0.18016
+             2549205     rotate         1   1  0.48300   0.43765
+             2550847  translate         1   1  0.51800   0.18665
+             2555162     rotate         1   1  0.52667   0.45953
+             2556825  translate         1   1  0.48033   0.17931
+             2561234     rotate         1   1  0.47567   0.43655
+             2562791  translate         1   1  0.50900   0.18254
+             2567177     rotate         1   1  0.51300   0.45838
+             2568875  translate         1   1  0.50000   0.18254
+             2573139     rotate         1   1  0.48767   0.43546
+             2574907  translate         1   1  0.48933   0.17864
+             2579028     rotate         1   1  0.50400   0.45723
+             2581007  translate         1   1  0.50367   0.17995
+             2584953     rotate         1   1  0.49867   0.43437
+             2587068  translate         1   1  0.50067   0.18019
+             2590995     rotate         1   1  0.50167   0.45609
+             2592963  translate         1   1  0.51300   0.18488
+             2596981     rotate         1   1  0.48400   0.43329
+             2599040  translate         1   1  0.47200   0.17452
+             2602937     rotate         1   1  0.50200   0.45495
+             2605008  translate         1   1  0.49633   0.17324
+             2608943     rotate         1   1  0.50000   0.47770
+             2611138  translate         1   1  0.52733   0.18271
+             2614840     rotate         1   1  0.47467   0.45381
+             2617138  translate         1   1  0.50733   0.18539
+             2620865     rotate         1   1  0.50167   0.47650
+             2623165  translate         1   1  0.50300   0.18651
+             2626926     rotate         1   1  0.48133   0.45268
+             2629119  translate         1   1  0.49000   0.18278
+             2632935     rotate         1   1  0.48900   0.43004
+             2634979  translate         1   1  0.49867   0.18229
+             2638914     rotate         1   1  0.50100   0.45155
+             2641087  translate         1   1  0.49167   0.17925
+             2644914     rotate         1   1  0.48800   0.42897
+             2647149  translate         1   1  0.50400   0.18068
+             2650778     rotate         1   1  0.50433   0.45042
+             2653245  translate         1   1  0.49267   0.17803
+             2656820     rotate         1   1  0.48733   0.42790
+             2659179  translate         1   1  0.49767   0.17720
+             2662842     rotate         1   1  0.50033   0.44929
+             2665164  translate         1   1  0.51433   0.18228
+             2668850     rotate         1   1  0.50133   0.47176
+             2671193  translate         1   1  0.49100   0.17900
+             2674857     rotate         1   1  0.48133   0.44817
+             2677168  translate         1   1  0.50267   0.17996
+             2680914     rotate         1   1  0.48900   0.42576
+             2683037  translate         1   1  0.49767   0.17912
+             2687002     rotate         1   1  0.49767   0.40447
+             2688991  translate         1   1  0.49433   0.17709
+             2693026     rotate         1   1  0.53500   0.42469
+             2694986  translate         1   1  0.51500   0.18240
+             2699060     rotate         1   1  0.51800   0.44593
+             2700918  translate         1   1  0.49467   0.18045
+             2705045     rotate         1   1  0.49933   0.42363
+             2706967  translate         1   1  0.48400   0.17468
+             2711051     rotate         1   1  0.51500   0.44481
+             2712961  translate         1   1  0.50267   0.17561
+             2716963     rotate         1   1  0.50300   0.46706
+             2719049  translate         1   1  0.50800   0.17842
+             2723082     rotate         1   1  0.47500   0.44370
+             2724879  translate         1   1  0.51400   0.18342
+             2729056     rotate         1   1  0.50000   0.46589
+             2730854  translate         1   1  0.49300   0.18085
+             2735227     rotate         1   1  0.46967   0.44259
+             2736721  translate         1   1  0.49800   0.18013
+             2741286     rotate         1   1  0.49667   0.42046
+             2742672  translate         1   1  0.50300   0.18121
+             2747427     rotate         1   1  0.52967   0.44149
+             2748547  translate         1   1  0.50867   0.18435
+             2753406     rotate         1   1  0.49300   0.41941
+             2754616  translate         1   1  0.49567   0.18275
+             2759409     rotate         1   1  0.53233   0.44038
+             2760602  translate         1   1  0.48900   0.17873
+             2765479     rotate         1   1  0.50733   0.46240
+             2766490  translate         1   1  0.51367   0.18361
+             2771385     rotate         1   1  0.48900   0.43928
+             2772689  translate         1   1  0.49967   0.18349
+             2777290     rotate         1   1  0.49100   0.41732
+             2778723  translate         1   1  0.49167   0.18043
+             2783393     rotate         1   1  0.52600   0.43818
+             2784518  translate         1   1  0.48433   0.17478
+             2789316     rotate         1   1  0.50767   0.46009
+             2790643  translate         1   1  0.50900   0.17793
+             2795381     rotate         1   1  0.49033   0.43709
+             2796596  translate         1   1  0.50433   0.17947
+             2801360     rotate         1   1  0.50700   0.45894
+             2802691  translate         1   1  0.51267   0.18401
+             2807312     rotate         1   1  0.50200   0.48189
+             2808670  translate         1   1  0.50833   0.18708
+             2813388     rotate         1   1  0.46800   0.45780
+             2814596  translate         1   1  0.49000   0.18334
+             2819298     rotate         1   1  0.49867   0.43491
+             2820805  translate         1   1  0.49100   0.18004
+             2825187     rotate         1   1  0.50933   0.45665
+             2826813  translate         1   1  0.49033   0.17656
+             2831195     rotate         1   1  0.51133   0.47948
+             2832874  translate         1   1  0.50467   0.17821
+             2837171     rotate         1   1  0.45833   0.45551
+             2838842  translate         1   1  0.52033   0.18545
+             2843209     rotate         1   1  0.50167   0.47829
+             2844722  translate         1   1  0.48400   0.17952
+             2849404     rotate         1   1  0.47500   0.45437
+             2850613  translate         1   1  0.48633   0.17461
+             2855323     rotate         1   1  0.49167   0.43165
+             2856775  translate         1   1  0.51433   0.17962
+             2861103     rotate         1   1  0.52367   0.45323
+             2862893  translate         1   1  0.50133   0.18010
+             2867161     rotate         1   1  0.48833   0.43057
+             2868853  translate         1   1  0.51500   0.18550
+             2873131     rotate         1   1  0.50167   0.45210
+             2874875  translate         1   1  0.46867   0.17388
+             2879164     rotate         1   1  0.50333   0.47471
+             2880796  translate         1   1  0.50200   0.17457
+             2885107     rotate         1   1  0.48633   0.45097
+             2886880  translate         1   1  0.52133   0.18202
+             2891114     rotate         1   1  0.50167   0.47352
+             2892870  translate         1   1  0.49900   0.18166
+             2897058     rotate         1   1  0.48500   0.44984
+             2898916  translate         1   1  0.49367   0.17935
+             2903027     rotate         1   1  0.50267   0.47234
+             2905038  translate         1   1  0.51700   0.18545
+             2908947     rotate         1   1  0.48067   0.44872
+             2911103  translate         1   1  0.49933   0.18521
+             2914888     rotate         1   1  0.49533   0.42628
+             2917023  translate         1   1  0.49767   0.18434
+             2921018     rotate         1   1  0.51700   0.44760
+             2922981  translate         1   1  0.48567   0.17906
+             2927047     rotate         1   1  0.51233   0.46998
+             2929051  translate         1   1  0.48767   0.17464
+             2933006     rotate         1   1  0.47500   0.44648
+             2935014  translate         1   1  0.50667   0.17697
+             2938946     rotate         1   1  0.49300   0.42415
+             2941057  translate         1   1  0.51133   0.18098
+             2944933     rotate         1   1  0.51733   0.44536
+             2947127  translate         1   1  0.50900   0.18424
+             2950762     rotate         1   1  0.48967   0.42309
+             2953293  translate         1   1  0.49067   0.18080
+             2956590     rotate         1   1  0.52633   0.44425
+             2959340  translate         1   1  0.48367   0.17489
+             2962637     rotate         1   1  0.50433   0.46646
+             2965419  translate         1   1  0.53400   0.18678
+             2968645     rotate         1   1  0.48400   0.44314
+             2971395  translate         1   1  0.47933   0.17906
+             2974637     rotate         1   1  0.51267   0.46530
+             2977347  translate         1   1  0.49333   0.17668
+             2980641     rotate         1   1  0.48900   0.44203
+             2983436  translate         1   1  0.51300   0.18127
+             2986587     rotate         1   1  0.50900   0.46413
+             2989419  translate         1   1  0.49000   0.17764
+             2992628     rotate         1   1  0.50367   0.48734
+             2995341  translate         1   1  0.49767   0.17682
+             2998647     rotate         1   1  0.47233   0.46297
+             3001323  translate         1   1  0.50967   0.18023
+             3004524     rotate         1   1  0.48167   0.43982
+             3007406  translate         1   1  0.50833   0.18324
+             3010516     rotate         1   1  0.51233   0.46181
+             3013452  translate         1   1  0.50867   0.18641
+             3016584     rotate         1   1  0.48300   0.43872
+             3019307  translate         1   1  0.47500   0.17709
+             3022676     rotate         1   1  0.50967   0.46066
+             3025331  translate         1   1  0.50033   0.17721
+             3028617     rotate         1   1  0.47700   0.43763
+             3031475  translate         1   1  0.48800   0.17296
+             3034516     rotate         1   1  0.47967   0.41575
+             3037440  translate         1   1  0.50233   0.17377
+             3040620     rotate         1   1  0.51133   0.43653
+             3043468  translate         1   1  0.50867   0.17678
+             3046644     rotate         1   1  0.49400   0.41471
+             3049409  translate         1   1  0.51900   0.18350
+             3052514     rotate         1   1  0.52400   0.43544
+             3055424  translate         1   1  0.48800   0.17909
+             3058593     rotate         1   1  0.49833   0.41367
+             3061421  translate         1   1  0.49900   0.17873
+             3064470     rotate         1   1  0.51967   0.43435
+             3067557  translate         1   1  0.51400   0.18374
+             3070495     rotate         1   1  0.48800   0.41264
+             3073643  translate         1   1  0.49967   0.18362
+             3076329     rotate         1   1  0.54100   0.43327
+             3079676  translate         1   1  0.48233   0.17713
+             3082294     rotate         1   1  0.52867   0.45493
+             3085746  translate         1   1  0.49233   0.17441
+             3088255     rotate         1   1  0.47800   0.43218
+             3091723  translate         1   1  0.51467   0.17953
+             3094350     rotate         1   1  0.50133   0.45379
+             3097664  translate         1   1  0.50833   0.18252
+             3100445     rotate         1   1  0.49967   0.43110
+             3103574  translate         1   1  0.50333   0.18374
+             3106506     rotate         1   1  0.50800   0.45266
+             3109541  translate         1   1  0.48800   0.17933
+             3112531     rotate         1   1  0.48733   0.43003
+             3115543  translate         1   1  0.49533   0.17765
+             3118412     rotate         1   1  0.52233   0.45153
+             3121670  translate         1   1  0.51633   0.18346
+             3124347     rotate         1   1  0.51033   0.47410
+             3127641  translate         1   1  0.48533   0.17807
+             3130312     rotate         1   1  0.46767   0.45040
+             3133674  translate         1   1  0.50600   0.18021
+             3136324     rotate         1   1  0.49867   0.42788
+             3139709  translate         1   1  0.51400   0.18526
+             3142244     rotate         1   1  0.50200   0.44927
+             3145861  translate         1   1  0.48433   0.17945
+             3148094     rotate         1   1  0.50667   0.47174
+             3151879  translate         1   1  0.50667   0.18185
+             3154126     rotate         1   1  0.48867   0.44815
+             3157942  translate         1   1  0.51533   0.18742
+             3160035     rotate         1   1  0.49067   0.42574
+             3163961  translate         1   1  0.48033   0.18005
+             3166069     rotate         1   1  0.51267   0.44703
+             3169947  translate         1   1  0.50067   0.18029
+             3172141     rotate         1   1  0.49000   0.42468
+             3175752  translate         1   1  0.50000   0.18029
+             3178177     rotate         1   1  0.52000   0.44591
+             3181885  translate         1   1  0.49633   0.17897
+             3184076     rotate         1   1  0.51033   0.46821
+             3187925  translate         1   1  0.49400   0.17682
+             3190148     rotate         1   1  0.47867   0.44480
+             3193941  translate         1   1  0.49533   0.17517
+             3196055     rotate         1   1  0.49733   0.42256
+             3199990  translate         1   1  0.51300   0.17972
+             3201960     rotate         1   1  0.51700   0.44368
+             3206110  translate         1   1  0.48533   0.17445
+             3207873     rotate         1   1  0.50467   0.46587
+             3211986  translate         1   1  0.50600   0.17655
+             3213993     rotate         1   1  0.48933   0.44257
+             3217976  translate         1   1  0.50967   0.17996
+             3220043     rotate         1   1  0.49900   0.42045
+             3223925  translate         1   1  0.47600   0.17132
+             3226047     rotate         1   1  0.50567   0.44147
+             3229995  translate         1   1  0.52967   0.18149
+             3231961     rotate         1   1  0.50167   0.46354
+             3236124  translate         1   1  0.49233   0.17870
+             3237920     rotate         1   1  0.48733   0.44036
+             3242018  translate         1   1  0.51733   0.18490
+             3244010     rotate         1   1  0.50367   0.46238
+             3248035  translate         1   1  0.49667   0.18367
+             3250006     rotate         1   1  0.48333   0.43926
+             3254040  translate         1   1  0.48733   0.17901
+             3255947     rotate         1   1  0.50733   0.46123
+             3260132  translate         1   1  0.50400   0.18045
+             3261853     rotate         1   1  0.47500   0.43817
+             3266244  translate         1   1  0.50933   0.18381
+             3267769     rotate         1   1  0.49733   0.41626
+             3272136  translate         1   1  0.51000   0.18749
+             3273863     rotate         1   1  0.50567   0.43707
+             3278142  translate         1   1  0.49267   0.18474
+             3279874     rotate         1   1  0.50600   0.45892
+             3284032  translate         1   1  0.48667   0.17981
+             3285983     rotate         1   1  0.48467   0.43598
+             3290148  translate         1   1  0.47800   0.17190
+             3291869     rotate         1   1  0.52633   0.45778
+             3296198  translate         1   1  0.52567   0.18073
+             3297784     rotate         1   1  0.50033   0.48067
+             3302242  translate         1   1  0.48933   0.17687
+             3303727     rotate         1   1  0.47767   0.45663
+             3308269  translate         1   1  0.50900   0.18005
+             3309808     rotate         1   1  0.49067   0.43380
+             3314149  translate         1   1  0.50133   0.18053
+             3315864     rotate         1   1  0.49400   0.41211
+             3320094  translate         1   1  0.50133   0.18102
+             3321865     rotate         1   1  0.52800   0.43272
+             3326152  translate         1   1  0.50633   0.18331
+             3327798     rotate         1   1  0.50233   0.45435
+             3332270  translate         1   1  0.47600   0.17451
+             3333673     rotate         1   1  0.48600   0.43163
+             3338348  translate         1   1  0.49400   0.17242
+             3339703     rotate         1   1  0.50033   0.45322
+             3344415  translate         1   1  0.52667   0.18161
+             3345610     rotate         1   1  0.48500   0.43056
+             3350592  translate         1   1  0.49967   0.18149
+             3351403     rotate         1   1  0.49233   0.40903
+             3356621  translate         1   1  0.47600   0.17278
+             3357370     rotate         1   1  0.53133   0.42948
+             3362668  translate         1   1  0.52800   0.18245
+             3363311     rotate         1   1  0.51033   0.45095
+             3368725  translate         1   1  0.48700   0.17771
+             3369295     rotate         1   1  0.49800   0.42841
+             3374697  translate         1   1  0.49433   0.17570
+             3375339     rotate         1   1  0.51800   0.44983
+             3380609  translate         1   1  0.50033   0.17581
+             3381391     rotate         1   1  0.49733   0.42733
+             3386519  translate         1   1  0.50000   0.17581
+             3387501     rotate         1   1  0.51100   0.44870
+             3392476  translate         1   1  0.50500   0.17757
+             3393542     rotate         1   1  0.49733   0.42627
+             3398524  translate         1   1  0.50400   0.17899
+             3399503     rotate         1   1  0.50900   0.44758
+             3404410  translate         1   1  0.48367   0.17315
+             3405519     rotate         1   1  0.49433   0.42520
+             3410581  translate         1   1  0.54733   0.18954
+             3411424     rotate         1   1  0.50533   0.44646
+             3416692  translate         1   1  0.48833   0.18511
+             3417288     rotate         1   1  0.49767   0.42414
+             3422647  translate         1   1  0.49233   0.18228
+             3423325     rotate         1   1  0.52467   0.44534
+             3428604  translate         1   1  0.49400   0.18009
+             3429385     rotate         1   1  0.50333   0.46761
+             3434685  translate         1   1  0.49833   0.17949
+             3435317     rotate         1   1  0.49133   0.44423
+             3440649  translate         1   1  0.50600   0.18164
+             3441365     rotate         1   1  0.49800   0.42202
+             3446570  translate         1   1  0.50200   0.18237
+             3447421     rotate         1   1  0.51133   0.44312
+             3452574  translate         1   1  0.49300   0.17982
+             3453401     rotate         1   1  0.50567   0.46528
+             3458568  translate         1   1  0.51600   0.18557
+             3459468     rotate         1   1  0.48433   0.44201
+             3464629  translate         1   1  0.48100   0.17852
+             3465375     rotate         1   1  0.50667   0.46411
+             3470655  translate         1   1  0.51000   0.18209
+             3471351     rotate         1   1  0.48167   0.44091
+             3476553  translate         1   1  0.48767   0.17760
+             3477433     rotate         1   1  0.49767   0.41886
+             3482397  translate         1   1  0.49767   0.17677
+             3483586     rotate         1   1  0.52600   0.43980
+             3488428  translate         1   1  0.50567   0.17877
+             3489547     rotate         1   1  0.51067   0.46180
+             3494369  translate         1   1  0.51167   0.18294
+             3495612     rotate         1   1  0.47167   0.43871
+             3500352  translate         1   1  0.50033   0.18306
+             3501652     rotate         1   1  0.50833   0.46064
+             3506278  translate         1   1  0.49200   0.18014
+             3507748     rotate         1   1  0.47667   0.43761
+             3512218  translate         1   1  0.48833   0.17593
+             3513792     rotate         1   1  0.51067   0.45949
+             3518270  translate         1   1  0.51433   0.18098
+             3519743     rotate         1   1  0.48967   0.43651
+             3524293  translate         1   1  0.49400   0.17880
+             3525734     rotate         1   1  0.51767   0.45834
+             3530290  translate         1   1  0.51600   0.18453
+             3531694     rotate         1   1  0.49600   0.43542
+             3536386  translate         1   1  0.50000   0.18453
+             3537521     rotate         1   1  0.49300   0.41365
+             3542421  translate         1   1  0.50800   0.18748
+             3543583     rotate         1   1  0.52833   0.43433
+             3548562  translate         1   1  0.47833   0.17935
+             3549476     rotate         1   1  0.48567   0.41262
+             3554631  translate         1   1  0.49400   0.17720
+             3555378     rotate         1   1  0.52833   0.43325
+             3560584  translate         1   1  0.51200   0.18145
+             3561375     rotate         1   1  0.50200   0.45491
+             3566636  translate         1   1  0.49100   0.17819
+             3567362     rotate         1   1  0.49967   0.43217
+             3572715  translate         1   1  0.50100   0.17854
+             3573279     rotate         1   1  0.49767   0.41056
+             3578640  translate         1   1  0.48933   0.17474
+             3579410     rotate         1   1  0.51500   0.43109
+             3584575  translate         1   1  0.50367   0.17602
+             3585424     rotate         1   1  0.50433   0.45264
+             3590663  translate         1   1  0.49867   0.17555
+             3591307     rotate         1   1  0.48933   0.43001
+             3596726  translate         1   1  0.51733   0.18163
+             3597304     rotate         1   1  0.50700   0.45151
+             3602780  translate         1   1  0.49633   0.18030
+             3603205     rotate         1   1  0.49133   0.42893
+             3608684  translate         1   1  0.48733   0.17573
+             3609321     rotate         1   1  0.51233   0.45038
+             3614562  translate         1   1  0.51400   0.18065
+             3615407     rotate         1   1  0.49633   0.42786
+             3620675  translate         1   1  0.51567   0.18631
+             3621324     rotate         1   1  0.52367   0.44925
+             3626645  translate         1   1  0.49033   0.18271
+             3627364     rotate         1   1  0.48700   0.42679
+             3632808  translate         1   1  0.51133   0.18685
+             3633177     rotate         1   1  0.48933   0.40545
+             3638926  translate         1   1  0.47667   0.17813
+             3639106     rotate         1   1  0.53467   0.42572
+             3644808  translate         1   1  0.49867   0.17766
+             3645180     rotate         1   1  0.50733   0.44701
+             3650854  translate         1   1  0.49500   0.17588
+             3651149     rotate         1   1  0.49567   0.42466
+             3656874  translate         1   1  0.49933   0.17565
+             3657166     rotate         1   1  0.51200   0.44589
+             3662876  translate         1   1  0.48600   0.17073
+             3663124     rotate         1   1  0.49633   0.42360
+             3668759  translate         1   1  0.51233   0.17494
+             3669228     rotate         1   1  0.50200   0.44478
+             3674801  translate         1   1  0.51167   0.17902
+             3675201     rotate         1   1  0.50433   0.46702
+             3680821  translate         1   1  0.49800   0.17831
+             3681199     rotate         1   1  0.48100   0.44367
+             3686734  translate         1   1  0.50733   0.18092
+             3687282     rotate         1   1  0.51200   0.46585
+             3692608  translate         1   1  0.50667   0.18333
+             3693424     rotate         1   1  0.47900   0.44256
+             3698536  translate         1   1  0.49933   0.18309
+             3699426     rotate         1   1  0.49533   0.42043
+             3704789  translate         1   1  0.50100   0.18346
+             3705195     rotate         1   1  0.52567   0.44145
+             3710842  translate         1   1  0.48033   0.17624
+             3711139     rotate         1   1  0.49233   0.41938
+             3716852  translate         1   1  0.50000   0.17624
+             3717182     rotate         1   1  0.51467   0.44035
+             3722839  translate         1   1  0.51367   0.18106
+             3723143     rotate         1   1  0.49067   0.41833
+             3728960  translate         1   1  0.49700   0.17997
+             3729049     rotate         1   1  0.51567   0.43925
+             3734976     rotate         1   1  0.49700   0.41728
+             3735013  translate         1   1  0.49000   0.17637
+             3740953  translate         1   1  0.50767   0.17908
+             3741045     rotate         1   1  0.50733   0.43815
+             3746905     rotate         1   1  0.50333   0.46005
+             3747095  translate         1   1  0.49733   0.17812
+             3752891     rotate         1   1  0.48067   0.43705
+             3753084  translate         1   1  0.50033   0.17824
+             3758981     rotate         1   1  0.49867   0.41520
+             3759038  translate         1   1  0.50667   0.18062
+             3764921     rotate         1   1  0.51500   0.43596
+             3765072  translate         1   1  0.48400   0.17484
+             3770881     rotate         1   1  0.50133   0.45776
+             3771112  translate         1   1  0.51133   0.17880
+             3776871     rotate         1   1  0.48700   0.43487
+             3777123  translate         1   1  0.51600   0.18452
+             3782809     rotate         1   1  0.52500   0.45661
+             3783226  translate         1   1  0.49133   0.18132
+             3788905     rotate         1   1  0.48633   0.43378
+             3789093  translate         1   1  0.48533   0.17600
+             3794905     rotate         1   1  0.51433   0.45547
+             3795073  translate         1   1  0.50533   0.17788
+             3800826     rotate         1   1  0.48733   0.43270
+             3801175  translate         1   1  0.49933   0.17764
+             3806919     rotate         1   1  0.51433   0.45433
+             3807075  translate         1   1  0.50167   0.17824
+             3812856     rotate         1   1  0.48667   0.43162
+             3813128  translate         1   1  0.51100   0.18216
+             3818793     rotate         1   1  0.52233   0.45320
+             3819179  translate         1   1  0.48833   0.17791
+             3824859     rotate         1   1  0.49033   0.43054
+             3825167  translate         1   1  0.50733   0.18052
+             3830785     rotate         1   1  0.51500   0.45206
+             3831262  translate         1   1  0.50133   0.18100
+             3836689     rotate         1   1  0.47633   0.42946
+             3837306  translate         1   1  0.48033   0.17388
+             3842652     rotate         1   1  0.50700   0.45093
+             3843325  translate         1   1  0.50900   0.17701
+             3848683     rotate         1   1  0.49033   0.42839
+             3849285  translate         1   1  0.50000   0.17701
+             3854771     rotate         1   1  0.51400   0.44981
+             3855232  translate         1   1  0.51100   0.18090
+             3860792     rotate         1   1  0.50200   0.47230
+             3861199  translate         1   1  0.48867   0.17680
+             3866980     rotate         1   1  0.47000   0.44868
+             3867013  translate         1   1  0.50967   0.18022
+             3872969  translate         1   1  0.49633   0.17890
+             3873028     rotate         1   1  0.49900   0.42625
+             3878861     rotate         1   1  0.50567   0.44756
+             3879136  translate         1   1  0.50767   0.18164
+             3884918     rotate         1   1  0.50433   0.46994
+             3885055  translate         1   1  0.51000   0.18528
+             3890908     rotate         1   1  0.48500   0.44644
+             3891092  translate         1   1  0.48667   0.18033
+             3896892  translate         1   1  0.49967   0.18021
+             3897101     rotate         1   1  0.50500   0.46876
+             3902848  translate         1   1  0.51533   0.18574
+             3903141     rotate         1   1  0.47767   0.44533
+             3908814  translate         1   1  0.48000   0.17831
+             3909176     rotate         1   1  0.49767   0.42306
+             3914797  translate         1   1  0.48633   0.17344
+             3915200     rotate         1   1  0.51300   0.44421
+             3920855  translate         1   1  0.50100   0.17378
+             3921142     rotate         1   1  0.49700   0.42200
+             3926963  translate         1   1  0.49533   0.17216
+             3927030     rotate         1   1  0.51100   0.44310
+             3932950  translate         1   1  0.50333   0.17331
+             3933041     rotate         1   1  0.50067   0.46526
+             3938959  translate         1   1  0.51433   0.17828
+             3939037     rotate         1   1  0.47067   0.44199
+             3944960  translate         1   1  0.51033   0.18196
+             3945060     rotate         1   1  0.49633   0.41989
+             3950876  translate         1   1  0.49833   0.18136
+             3951134     rotate         1   1  0.51000   0.44089
+             3956919  translate         1   1  0.50033   0.18148
+             3957068     rotate         1   1  0.47733   0.41884
+             3962984  translate         1   1  0.48267   0.17519
+             3963021     rotate         1   1  0.51000   0.43979
+             3968927  translate         1   1  0.50867   0.17822
+             3969057     rotate         1   1  0.48967   0.41780
+             3974982     rotate         1   1  0.52900   0.43869
+             3975011  translate         1   1  0.50967   0.18167
+             3980993     rotate         1   1  0.50233   0.46062
+             3981003  translate         1   1  0.48567   0.17646
+             3986960  translate         1   1  0.51733   0.18258
+             3987037     rotate         1   1  0.48867   0.43759
+             3992966  translate         1   1  0.47967   0.17515
+             3993021     rotate         1   1  0.49967   0.41571
+             3998975     rotate         1   1  0.51700   0.43650
+             3999014  translate         1   1  0.50267   0.17609
+             4004970     rotate         1   1  0.48800   0.41467
+             4005024  translate         1   1  0.50333   0.17726
+             4010928  translate         1   1  0.49367   0.17502
+             4011067     rotate         1   1  0.51433   0.43541
+             4016885  translate         1   1  0.49933   0.17478
+             4017118     rotate         1   1  0.50933   0.45718
+             4022908  translate         1   1  0.50067   0.17501
+             4023085     rotate         1   1  0.47900   0.43432
+             4028901  translate         1   1  0.50133   0.17548
+             4029109     rotate         1   1  0.50533   0.45603
+             4034643  translate         1   1  0.49400   0.17338
+             4035382     rotate         1   1  0.49467   0.43323
+             4040533  translate         1   1  0.49867   0.17291
+             4041452     rotate         1   1  0.48633   0.41157
+             4046644  translate         1   1  0.51633   0.17856
+             4047331     rotate         1   1  0.50767   0.43215
+             4052615  translate         1   1  0.49000   0.17499
+             4053351     rotate         1   1  0.49500   0.41054
+             4058722  translate         1   1  0.51200   0.17919
+             4059278     rotate         1   1  0.50533   0.43107
+             4064823  translate         1   1  0.49733   0.17823
+             4065190     rotate         1   1  0.51233   0.45262
+             4070704  translate         1   1  0.50000   0.17823
+             4071311     rotate         1   1  0.49000   0.42999
+             4076600  translate         1   1  0.50567   0.18025
+             4077414     rotate         1   1  0.49767   0.40849
+             4082577  translate         1   1  0.49133   0.17713
+             4083406     rotate         1   1  0.54800   0.42891
+             4088623  translate         1   1  0.49633   0.17583
+             4089381     rotate         1   1  0.50567   0.45036
+             4094686  translate         1   1  0.49400   0.17372
+             4095323     rotate         1   1  0.48900   0.42784
+             4100750  translate         1   1  0.49633   0.17245
+             4101223     rotate         1   1  0.51733   0.44923
+             4106731  translate         1   1  0.51633   0.17808
+             4107279     rotate         1   1  0.49933   0.42677
+             4112804  translate         1   1  0.49733   0.17713
+             4113178     rotate         1   1  0.49400   0.40543
+             4118870  translate         1   1  0.50267   0.17808
+             4119135     rotate         1   1  0.54067   0.42571
+             4124929  translate         1   1  0.51567   0.18366
+             4125072     rotate         1   1  0.51233   0.44699
+             4130874  translate         1   1  0.48867   0.17949
+             4131136     rotate         1   1  0.49100   0.42464
+             4136997     rotate         1   1  0.51100   0.44587
+             4137002  translate         1   1  0.48767   0.17507
+             4142984  translate         1   1  0.49200   0.17226
+             4143013     rotate         1   1  0.48733   0.42358
+             4148958  translate         1   1  0.50100   0.17261
+             4149046     rotate         1   1  0.51567   0.44476
+             4154899  translate         1   1  0.53433   0.18446
+             4155114     rotate         1   1  0.49967   0.42252
+             4160865  translate         1   1  0.47767   0.17622
+             4161122     rotate         1   1  0.50633   0.44365
+             4166840  translate         1   1  0.50033   0.17634
+             4167156     rotate         1   1  0.48500   0.42146
+             4172792  translate         1   1  0.51133   0.18034
+             4173202     rotate         1   1  0.51500   0.44254
+             4178769  translate         1   1  0.47633   0.17180
+             4179220     rotate         1   1  0.49167   0.42041
+             4184697  translate         1   1  0.50567   0.17375
+             4185353     rotate         1   1  0.49267   0.39939
+             4190629  translate         1   1  0.51033   0.17734
+             4191399     rotate         1   1  0.52133   0.41936
+             4196567  translate         1   1  0.50533   0.17923
+             4197441     rotate         1   1  0.50633   0.44033
+             4202618  translate         1   1  0.49233   0.17648
+             4203374     rotate         1   1  0.48500   0.41831
+             4208646  translate         1   1  0.48300   0.17048
+             4209363     rotate         1   1  0.50800   0.43923
+             4214755  translate         1   1  0.52067   0.17753
+             4215242     rotate         1   1  0.48833   0.41727
+             4220670  translate         1   1  0.50733   0.18013
+             4221382     rotate         1   1  0.51867   0.43813
+             4226552  translate         1   1  0.47267   0.17028
+             4227457     rotate         1   1  0.49633   0.41622
+             4232565  translate         1   1  0.50300   0.17131
+             4233456     rotate         1   1  0.49567   0.39541
+             4238631  translate         1   1  0.49667   0.17016
+             4239399     rotate         1   1  0.52000   0.41518
+             4244634  translate         1   1  0.51100   0.17391
+             4245401     rotate         1   1  0.50967   0.43594
+             4250567  translate         1   1  0.48800   0.16973
+             4251411     rotate         1   1  0.48267   0.41414
+             4256683  translate         1   1  0.51600   0.17517
+             4257291     rotate         1   1  0.50267   0.43485
+             4262696  translate         1   1  0.49233   0.17248
+             4263322     rotate         1   1  0.49667   0.41311
+             4268690  translate         1   1  0.50900   0.17558
+             4269293     rotate         1   1  0.51500   0.43376
+             4274695  translate         1   1  0.51533   0.18097
+             4275305     rotate         1   1  0.50867   0.45545
+             4280746  translate         1   1  0.49400   0.17880
+             4281257     rotate         1   1  0.46167   0.43268
+             4286644  translate         1   1  0.49600   0.17737
+             4287373     rotate         1   1  0.51500   0.45431
+             4292788  translate         1   1  0.49733   0.17642
+             4293198     rotate         1   1  0.49200   0.43160
+             4298813  translate         1   1  0.49400   0.17430
+             4299162     rotate         1   1  0.49100   0.41002
+             4304918  translate         1   1  0.50600   0.17640
+             4305073     rotate         1   1  0.52633   0.43052
+             4310851  translate         1   1  0.50333   0.17757
+             4311151     rotate         1   1  0.49500   0.40899
+             4316927  translate         1   1  0.51167   0.18171
+             4317077     rotate         1   1  0.51467   0.42944
+             4322922  translate         1   1  0.49233   0.17893
+             4323104     rotate         1   1  0.50433   0.45092
+             4328926  translate         1   1  0.50400   0.18036
+             4329057     rotate         1   1  0.48333   0.42837
+             4334906  translate         1   1  0.48300   0.17423
+             4335111     rotate         1   1  0.49567   0.40695
+             4340818  translate         1   1  0.51067   0.17794
+             4341187     rotate         1   1  0.54567   0.42730
+             4346830  translate         1   1  0.49667   0.17676
+             4347162     rotate         1   1  0.51533   0.44866
+             4352766  translate         1   1  0.50067   0.17699
+             4353252     rotate         1   1  0.49500   0.42623
+             4358738  translate         1   1  0.50767   0.17971
+             4359267     rotate         1   1  0.51567   0.44754
+             4364554  translate         1   1  0.50500   0.18150
+             4365448     rotate         1   1  0.48100   0.42516
+             4370459  translate         1   1  0.49900   0.18114
+             4371589     rotate         1   1  0.51733   0.44642
+             4376322  translate         1   1  0.48833   0.17692
+             4377695     rotate         1   1  0.49433   0.42410
+             4382285  translate         1   1  0.50033   0.17703
+             4383745     rotate         1   1  0.50933   0.44531
+             4388256  translate         1   1  0.50567   0.17904
+             4389775     rotate         1   1  0.49700   0.42304
+             4394203  translate         1   1  0.50000   0.17904
+             4395787     rotate         1   1  0.50667   0.44419
+             4400277  translate         1   1  0.49400   0.17689
+             4401787     rotate         1   1  0.49300   0.42198
+             4406156  translate         1   1  0.51333   0.18161
+             4407760     rotate         1   1  0.50667   0.44308
+             4412345  translate         1   1  0.50600   0.18379
+             4413587     rotate         1   1  0.49667   0.42093
+             4418379  translate         1   1  0.48300   0.17754
+             4419653     rotate         1   1  0.50033   0.44198
+             4424470  translate         1   1  0.50833   0.18050
+             4425517     rotate         1   1  0.49100   0.41988
+             4430430  translate         1   1  0.49267   0.17785
+             4431583     rotate         1   1  0.52267   0.44087
+             4436543  translate         1   1  0.50133   0.17832
+             4437470     rotate         1   1  0.49933   0.41883
+             4442499  translate         1   1  0.50700   0.18082
+             4443469     rotate         1   1  0.51200   0.43977
+             4448585  translate         1   1  0.49167   0.17781
+             4449380     rotate         1   1  0.52200   0.46176
+             4454603  translate         1   1  0.52033   0.18504
+             4455404     rotate         1   1  0.49133   0.43867
+             4460686  translate         1   1  0.48900   0.18097
+             4461355     rotate         1   1  0.49433   0.41674
+             4466662  translate         1   1  0.49833   0.18036
+             4467346     rotate         1   1  0.50500   0.43757
+             4472576  translate         1   1  0.49367   0.17808
+             4473393     rotate         1   1  0.49367   0.41569
+             4478565  translate         1   1  0.50600   0.18022
+             4479419     rotate         1   1  0.51300   0.43648
+             4484620  translate         1   1  0.50133   0.18070
+             4485369     rotate         1   1  0.50600   0.45830
+             4490561  translate         1   1  0.49067   0.17732
+             4491459     rotate         1   1  0.49167   0.43539
+             4496538  translate         1   1  0.47833   0.16964
+             4497466     rotate         1   1  0.50633   0.45716
+             4502439  translate         1   1  0.51800   0.17575
+             4503588     rotate         1   1  0.49500   0.43430
+             4508388  translate         1   1  0.50400   0.17715
+             4509606     rotate         1   1  0.49333   0.41258
+             4514383  translate         1   1  0.50533   0.17904
+             4515603     rotate         1   1  0.51067   0.43321
+             4520372  translate         1   1  0.48667   0.17427
+             4521592     rotate         1   1  0.50300   0.45487
+             4526432  translate         1   1  0.50633   0.17648
+             4527584     rotate         1   1  0.48733   0.43213
+             4532407  translate         1   1  0.49633   0.17518
+             4533580     rotate         1   1  0.51233   0.45374
+             4538475  translate         1   1  0.50933   0.17845
+             4539548     rotate         1   1  0.47200   0.43105
+             4544460  translate         1   1  0.50000   0.17845
+             4545568     rotate         1   1  0.50600   0.45260
+             4550454  translate         1   1  0.50267   0.17940
+             4551523     rotate         1   1  0.47567   0.42997
+             4556550  translate         1   1  0.49033   0.17593
+             4557520     rotate         1   1  0.51133   0.45147
+             4562454  translate         1   1  0.49767   0.17511
+             4563504     rotate         1   1  0.49400   0.42890
+             4568580  translate         1   1  0.51533   0.18048
+             4569408     rotate         1   1  0.49767   0.40745
+             4574701  translate         1   1  0.49333   0.17808
+             4575302     rotate         1   1  0.52567   0.42782
+             4580742  translate         1   1  0.50767   0.18081
+             4581228     rotate         1   1  0.51267   0.44922
+             4586724  translate         1   1  0.48800   0.17647
+             4587275     rotate         1   1  0.51067   0.47168
+             4592785  translate         1   1  0.48933   0.17270
+             4593214     rotate         1   1  0.47500   0.44809
+             4598859  translate         1   1  0.49867   0.17224
+             4599156     rotate         1   1  0.49467   0.42569
+             4604850  translate         1   1  0.52067   0.17936
+             4605135     rotate         1   1  0.49467   0.40440
+             4610850  translate         1   1  0.47733   0.17123
+             4611139     rotate         1   1  0.52300   0.42462
+             4616829  translate         1   1  0.50833   0.17409
+             4617156     rotate         1   1  0.49333   0.40339
+             4622827  translate         1   1  0.49800   0.17339
+             4623192     rotate         1   1  0.52267   0.42356
+             4628919  translate         1   1  0.50567   0.17535
+             4629099     rotate         1   1  0.50033   0.44474
+             4634830  translate         1   1  0.49233   0.17267
+             4635167     rotate         1   1  0.48333   0.42250
+             4640827  translate         1   1  0.49767   0.17186
+             4641199     rotate         1   1  0.49233   0.40138
+             4646799  translate         1   1  0.50333   0.17301
+             4647184     rotate         1   1  0.54467   0.42145
+             4652860  translate         1   1  0.51167   0.17704
+             4653108     rotate         1   1  0.51567   0.44252
+             4658756  translate         1   1  0.48867   0.17303
+             4659247     rotate         1   1  0.49533   0.42039
+             4664770  translate         1   1  0.51133   0.17695
+             4665275     rotate         1   1  0.51800   0.44141
+             4670623  translate         1   1  0.49700   0.17589
+             4671362     rotate         1   1  0.48000   0.41934
+             4676581  translate         1   1  0.48267   0.16979
+             4677426     rotate         1   1  0.51200   0.44031
+             4682742  translate         1   1  0.50733   0.17228
+             4683259     rotate         1   1  0.47867   0.41829
+             4688934  translate         1   1  0.50567   0.17423
+             4689074     rotate         1   1  0.50900   0.43921
+             4694943  translate         1   1  0.50367   0.17551
+             4695064     rotate         1   1  0.50900   0.46117
+             4700962  translate         1   1  0.48900   0.17165
+             4701037     rotate         1   1  0.48333   0.43811
+             4706983  translate         1   1  0.51333   0.17623
+             4707007     rotate         1   1  0.48500   0.41621
+             4712928  translate         1   1  0.49833   0.17564
+             4713070     rotate         1   1  0.50867   0.43702
+             4718821  translate         1   1  0.50500   0.17740
+             4719186     rotate         1   1  0.48133   0.41516
+             4724723  translate         1   1  0.49600   0.17598
+             4725292     rotate         1   1  0.51767   0.43592
+             4730755  translate         1   1  0.49100   0.17281
+             4731275     rotate         1   1  0.50933   0.45772
+             4736763  translate         1   1  0.50133   0.17327
+             4737249     rotate         1   1  0.48700   0.43483
+             4742720  translate         1   1  0.51233   0.17755
+             4743302     rotate         1   1  0.48400   0.41309
+             4748649  translate         1   1  0.48900   0.17364
+             4749321     rotate         1   1  0.52333   0.43375
+             4754644  translate         1   1  0.49767   0.17283
+             4755342     rotate         1   1  0.50100   0.45543
+             4760699  translate         1   1  0.49100   0.16972
+             4761285     rotate         1   1  0.47800   0.43266
+             4766773  translate         1   1  0.50067   0.16994
+             4767236     rotate         1   1  0.51133   0.45429
+             4772739  translate         1   1  0.50267   0.17085
+             4773268     rotate         1   1  0.48800   0.43158
+             4778708  translate         1   1  0.53700   0.18349
+             4779286     rotate         1   1  0.50567   0.45316
+             4784728  translate         1   1  0.48633   0.17848
+             4785272     rotate         1   1  0.48933   0.43050
+             4790652  translate         1   1  0.52067   0.18586
+             4791371     rotate         1   1  0.50767   0.45203
+             4796648  translate         1   1  0.47733   0.17743
+             4797345     rotate         1   1  0.50167   0.47463
+             4802758  translate         1   1  0.49567   0.17589
+             4803240     rotate         1   1  0.47167   0.45090
+             4808937  translate         1   1  0.50800   0.17871
+             4809069     rotate         1   1  0.48600   0.42835
+             4814952  translate         1   1  0.48900   0.17478
+             4815059     rotate         1   1  0.50167   0.44977
+             4820969  translate         1   1  0.50233   0.17559
+             4821036     rotate         1   1  0.49867   0.42728
+             4826879     rotate         1   1  0.50267   0.44864
+             4827132  translate         1   1  0.49667   0.17442
+             4832844     rotate         1   1  0.48100   0.42621
+             4833149  translate         1   1  0.50167   0.17500
+             4838941     rotate         1   1  0.50633   0.44752
+             4839048  translate         1   1  0.49767   0.17419
+             4844855     rotate         1   1  0.49133   0.42515
+             4845139  translate         1   1  0.50533   0.17604
+             4850934     rotate         1   1  0.52433   0.44640
+             4851069  translate         1   1  0.50533   0.17792
+             4856977  translate         1   1  0.49833   0.17733
+             4857030     rotate         1   1  0.49500   0.42408
+             4862900  translate         1   1  0.48500   0.17201
+             4863118     rotate         1   1  0.50800   0.44529
+             4868883  translate         1   1  0.50600   0.17407
+             4869161     rotate         1   1  0.50000   0.46755
+             4874886  translate         1   1  0.51667   0.17987
+             4875124     rotate         1   1  0.48833   0.44417
+             4880765  translate         1   1  0.51400   0.18491
+             4881234     rotate         1   1  0.50500   0.46638
+             4886877  translate         1   1  0.48367   0.17887
+             4887119     rotate         1   1  0.46667   0.44306
+             4892841  translate         1   1  0.51833   0.18543
+             4893169     rotate         1   1  0.49367   0.42091
+             4898927  translate         1   1  0.49800   0.18469
+             4899085     rotate         1   1  0.52233   0.44196
+             4904836  translate         1   1  0.47200   0.17434
+             4905151     rotate         1   1  0.50233   0.46405
+             4910947  translate         1   1  0.51700   0.18027
+             4911051     rotate         1   1  0.47900   0.44085
+             4916982  translate         1   1  0.49033   0.17679
+             4917010     rotate         1   1  0.48967   0.41881
+             4922958     rotate         1   1  0.52300   0.43975
+             4923045  translate         1   1  0.50267   0.17773
+             4928891     rotate         1   1  0.49667   0.41776
+             4929113  translate         1   1  0.49967   0.17761
+             4934799     rotate         1   1  0.51500   0.43865
+             4935207  translate         1   1  0.50733   0.18022
+             4940840     rotate         1   1  0.50333   0.46058
+             4941139  translate         1   1  0.48667   0.17541
+             4946843     rotate         1   1  0.49633   0.43755
+             4947173  translate         1   1  0.52433   0.18395
+             4952872     rotate         1   1  0.51633   0.45943
+             4953117  translate         1   1  0.49333   0.18149
+             4958952     rotate         1   1  0.49867   0.43646
+             4959059  translate         1   1  0.50067   0.18174
+             4964966     rotate         1   1  0.49800   0.41464
+             4965036  translate         1   1  0.48867   0.17762
+             4970987  translate         1   1  0.49167   0.17466
+             4971013     rotate         1   1  0.51800   0.43537
+             4976885     rotate         1   1  0.49167   0.41360
+             4977122  translate         1   1  0.49467   0.17279
+             4982955     rotate         1   1  0.52567   0.43428
+             4983040  translate         1   1  0.51233   0.17706
+             4988879     rotate         1   1  0.49467   0.41257
+             4989099  translate         1   1  0.50100   0.17741
+             4994942     rotate         1   1  0.51767   0.43319
+             4995073  translate         1   1  0.49467   0.17552
+********************************************************************************
+
+Energy of final configuration
+********************************************************************************
+
+ Energy components for box 1     kJ/mol-Extensive       Relative_Error
+ ---------------------------------------------------------------------
+ Total system energy                   -20655.661           -0.528E-13
+ Intra molecular energy                     0.000            0.000E+00
+   Bond energy                              0.000            0.000E+00
+   Bond angle energy                        0.000            0.000E+00
+   Dihedral angle energy                    0.000            0.000E+00
+   Improper angle energy                    0.000            0.000E+00
+   Intra molecule vdw                       0.000            0.000E+00
+   Intra molecule q                         0.000            0.000E+00
+ Inter molecular energy                -20655.661           -0.528E-13
+   Inter molecule vdw                    3059.446            0.803E-13
+   Long range correction                 -130.645           -0.000E+00
+   Inter molecule q                     95536.775            0.799E-14
+   Reciprocal ewald                       303.119            0.480E-15
+   Self ewald                         -119424.358           -0.000E+00
+ ---------------------------------------------------------------------
+   Number of reciprocal vectors              4101
+
+********************************************************************************
+
+
+Writing information for box  1
+********************************************************************************
+
+   ---------------------------------------------------------
+   Writing information for species  1
+
+                Move      Trials     Success   % Success
+           Translate     2498396     1246896       49.91
+              Rotate     2501604     1264342       50.54
+   ---------------------------------------------------------
+
+
+   ---------------------------------------------------------
+   Writing information for species  2
+
+                Move      Trials     Success   % Success
+   ---------------------------------------------------------
+
+********************************************************************************
+
+ Writing information about subroutine times
+********************************************************************************
+ Translation time =            1.533524 hrs.
+ Rotation time =               1.536955 hrs.
+********************************************************************************
+
+********************************************************************************
+************************ Cassandra simulation complete *************************
+********************************************************************************
+
+ Program execution time
+********************************************************************************
+         0      Years
+         0     Months
+         0       Days
+         3      Hours
+         5    Minutes
+        49    Seconds
+       342         ms
+********************************************************************************

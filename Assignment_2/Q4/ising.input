@@ -1,0 +1,32 @@
+ising2d_40.log                           : name of log file
+57557                                          : rdm nbr seed
+mvst.1                                         : magnetization vs T filename
+75                                             : unit (don't change)
+evst.1                                         : energyvs T filename
+76                                             : unit (don't change)
+mflucvst.1                                     : magnetiz fluc vs T filename
+77                                             : unit (don't change)
+eflucvst.1                                     : energy fluc vs T filename
+78                                             : unit (don't change)
+1                               		 : 1 = random init,2-inter,3=check,4=read
+500000                          		 : number of equilibration steps performed at each temperature value
+19                                             : n different runs 
+40 10000000 10.0
+40 10000000 9.5
+40 10000000 9.0  
+40 10000000 8.5
+40 10000000 8.0
+40 10000000 7.5
+40 10000000 7.0
+40 10000000 6.5
+40 10000000 6.0
+40 10000000 5.5                                
+40 10000000 5.0                                : size of lattice, no. of cycles containing some mc moves, kT/J
+40 10000000 4.5
+40 10000000 4.0                      
+40 10000000 3.5      
+40 10000000 3.0                       
+40 10000000 2.5                      
+40 10000000 2.0                       
+40 10000000 1.5                       
+40 10000000 1.0 		             

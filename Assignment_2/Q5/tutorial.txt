@@ -1,0 +1,39 @@
+Cassandra Tutorial
+
+Name: Water between sheets of graphene
+required files: nvt.inp spce.mcf spce.dat graphene.mcf graphene.xyz
+
+Steps
+0.  Open vmd. Open the Nanotube Builder (Extensions --> Modeling --> Nanotube
+    Builder). Enter the following parameters:
+
+    Edge length along x (nm): 5
+    Edge length along y (nm): 5
+    Number of layers: 4
+
+1.  Open graphene.xyz in vmd. How many graphene sheets are there? How many 
+    carbon atoms are there in total?
+2.  Open graphene.mcf in a text editor. How many carbon atoms are listed?
+3.  Open nvt.inp in a text editor and enter appropriate values for the 
+    following options
+
+    Run_Name:
+    Seed_Info:
+    Simulation_Length_Info:
+      Prop_Freq
+      Coord_Freq
+      Run
+
+4.  In a terminal, run command:
+
+> cassandra.exe nvt.inp
+
+5.  Open the log file in a text editor.
+6.  Open xyz trajectory in vmd. In a terminal, run command:
+
+> vmd -e ../../Scripts/box.tcl RUN_NAME.xyz -args RUN_NAME.H 3 1
+
+7.  Plot the energy using the following command:
+
+> python ../../Scripts/plot.py RUN_NAME.prp1
+

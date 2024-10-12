@@ -1,0 +1,27 @@
+units 			metal
+boundary		p p p
+atom_style 		full
+neighbor 		1.0 bin
+neigh_modify		delay 1
+
+read_data 		amorphousSiO_Q3_b1.data
+
+pair_style 		vashishta
+pair_coeff * * 	SiO.1990.vashishta Si O
+dump 			dmp all atom 1000 dump.lammpstrj
+
+timestep		0.001
+
+fix			nvt1 all nvt temp 300 300 0.1
+
+thermo			1000
+
+
+variable		var loop 45
+label 			loop
+change_box 		all x scale 1.005 remap
+run 			2000
+next 			var
+jump 			input_Q3_b1.in loop
+run 			20000
+write_data 		crackSiO_Q3_b2.data
