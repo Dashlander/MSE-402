@@ -1,21 +1,21 @@
 import numpy as np
 import scipy
 
-#simulation paramters
-n = 500                                     #number of Atoms
-Edgelength_box = np.float64(5e-8)           #box length, in metres: 500 Angstroms
-runtime_iterations = 1000                   #number of times the loop will run
-time_step = np.float64(1e-15)               #time step = 1fs
-Temp = np.float64(300)                      #Initial temperature in Kelvin
+# Simulation parameters
+n = 500                                     # number of Atoms
+Edgelength_box = np.float64(5e-9)           # box length, in meters: 50 Angstroms
+runtime_iterations = 5000                 # number of times the loop will run
+time_step = np.float64(1e-15)               # time step = 1fs
+Temp = np.float64(300)                      # Initial temperature in Kelvin
 
-#constants
-k_b = np.float64(scipy.constants.k)         #Boltzmann constant
-m_Ar = np.float64(6.642160e-26)             #mass of Arg
+# Constants
+k_b = np.float64(scipy.constants.k)         # Boltzmann constant
+m_Ar = np.float64(6.642160e-26)             # mass of Argon
 
-#sigma and Epsilon for Argon
-sigma = np.float64(3.4e-10)                #LJ sigma for Ar
-epsilon = np.float64(1.65e-21)             #LJ epsilon for Ar
-cutoff_distance = np.float64(1e-9)         #cutoff distance for LJ potential, normally taken as 2.5*sigma, which would be 8.5 in this case, but I am using 10 for simplicity
+# Sigma and Epsilon for Argon
+sigma = np.float64(3.4e-10)                 # LJ sigma for Ar
+epsilon = np.float64(1.65e-21)              # LJ epsilon for Ar
+cutoff_distance = np.float64(1e-9)          # cutoff distance for LJ potential
 
 # Pre-compute LJ constants
 sigma_6 = sigma ** 6
@@ -60,6 +60,17 @@ def kinetic_energy(v):
 def temperature(v):
     return 2 * kinetic_energy(v) / (3 * k_b * n)
 
+# Function to write atom positions in .xyz format
+def write_xyz(filename, r, iteration):
+    with open(filename, 'a') as f:
+        f.write(f"ITEM: TIMESTEP \n{iteration}\n")
+        f.write(f"ITEM: NUMBER OF ATOMS\n{n}\n")
+        f.write("ITEM: BOX BOUNDS pp pp pp\n")
+        f.write(f"0 {Edgelength_box*1e+10}\n0 {Edgelength_box*1e+10}\n0 {Edgelength_box*1e+10}\n")
+        f.write("ITEM: ATOMS id type x y z\n")
+        for i in range(n):
+            f.write(f"{i+1} 1 {np.round(r[i, 0]*1e+10,3)} {np.round(r[i, 1]*1e+10,3)} {np.round(r[i, 2]*1e+10,3)}\n")
+
 # Main Loop with Velocity Verlet
 def main_loop(n, Edgelength_box, runtime_iterations, time_step, Temp):
     r = init_pos(n, Edgelength_box)
@@ -72,9 +83,21 @@ def main_loop(n, Edgelength_box, runtime_iterations, time_step, Temp):
     
     print("Iteration", "Potential Energy", "Kinetic Energy", "Temperature")
     
-    for _ in range(runtime_iterations):
+    # Initialize the .xyz file
+    output_filename = "dump.lammpstrj"
+    with open(output_filename, 'w') as f:
+        f.write(f"ITEM: TIMESTEP \n0\n")
+        f.write(f"ITEM: NUMBER OF ATOMS\n{n}\n")
+        f.write("ITEM: BOX BOUNDS pp pp pp\n")
+        f.write(f"0 {Edgelength_box*1e+10}\n0 {Edgelength_box*1e+10}\n0 {Edgelength_box*1e+10}\n")
+        f.write("ITEM: ATOMS id type x y z\n")
+        for i in range(n):
+            f.write(f"{i+1} 1 {np.round(r[i, 0]*1e+10,3)} {np.round(r[i, 1]*1e+10,3)} {np.round(r[i, 2]*1e+10,3)}\n")
+
+    for iteration in range(runtime_iterations):
         # Position update
         r += v * time_step + 0.5 * (F_sum / m_Ar) * time_step ** 2
+        r = r % Edgelength_box
         
         # New force calculation
         r_ij = minimum_image_distance(r, Edgelength_box)
@@ -90,8 +113,9 @@ def main_loop(n, Edgelength_box, runtime_iterations, time_step, Temp):
         K = kinetic_energy(v)
         T = temperature(v)
         
-        if _ % 100 == 0:
-            print(_, U, K, T)
+        if iteration % 100 == 0:
+            print(iteration, U, K, T)
+            write_xyz(output_filename, r, iteration)
     
     return U, K, T
 
