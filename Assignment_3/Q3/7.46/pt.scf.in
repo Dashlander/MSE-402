@@ -1,0 +1,24 @@
+ &control
+    calculation = 'scf'
+    restart_mode='from_scratch',
+    prefix='platinum',
+    tstress = .true.
+    tprnfor = .true.
+    pseudo_dir = '/home/dashlander/Desktop/Sem7/CPD/Assignment_3/pseudo',
+ /
+ &system
+    ibrav=  2, celldm(1) =7.46, nat=  1, ntyp= 1,
+    ecutwfc =20, lspinorb= .true., noncolin= .true., 
+ /
+ &electrons
+    diagonalization='david'
+    mixing_mode = 'plain'
+    mixing_beta = 0.7
+    conv_thr =  1.0d-8
+ /
+ATOMIC_SPECIES
+ Pt  195.084 Pt.rel-pz-n-rrkjus.UPF 
+ATOMIC_POSITIONS (alat)
+ Pt 0.00 0.00 0.00
+K_POINTS {automatic}
+ 9 9 9 0 0 0

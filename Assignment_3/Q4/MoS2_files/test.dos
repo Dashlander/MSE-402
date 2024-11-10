@@ -1,0 +1,6 @@
+&DOS
+  prefix='MoS2',
+  fildos='MoS2_dos.dat',
+  emin=6.0,
+  emax=12.0
+/

@@ -1,0 +1,13 @@
+1. You can choose bash scripts (ones with '.sh' extension) for automating the simulations. Remember to choose an appropriate keyword in the Q1_pt.scf.template file to replace using the sed command. 
+
+
+2. For the k-piont grid generation (Question 2), you can use the "Q2_qe_kpoints.sh" file with suitable modifications for choosing the range of k-point selections as asked in the question. 
+
+
+3. You can use the grep and awk commands for selecting desired information from the simulation output. 
+
+
+e.g. "grep -e 'total energy' pt.out | awk '{ print $5 }' > output.data" will output all occurrences of the words "total energy" from the file si.scf.out and further select the 5th column from all such lines and write it to the file "output.data". 
+
+
+4. To run Q1, Q2 and Q3, type in the terminal "./name_of_.sh_file". If there is permission issue, type "chmod +x name_of_.sh_file" and rerun the previous command.
