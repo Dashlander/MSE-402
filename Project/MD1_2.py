@@ -1,21 +1,21 @@
 import numpy as np
-import scipy.constants as const
+import scipy
 
-# Simulation parametrs
-n = 500                                 # Number of atoms
-Edgelength_box = np.float64(5e-8)       # Box length, in metres: 500 Angstroms
-runtime_iterations = 1000               # Number of time steps
-time_step = np.float64(1e-15)           # Time step = 1fs
-Temp = np.float64(300)                  # Initial temperature in Kelvin
+#simulation paramters
+n = 500                                     #number of Atoms
+Edgelength_box = np.float64(5e-8)           #box length, in metres: 500 Angstroms
+runtime_iterations = 1000                   #number of times the loop will run
+time_step = np.float64(1e-15)               #time step = 1fs
+Temp = np.float64(300)                      #Initial temperature in Kelvin
 
-# Constants
-k_b = np.float64(const.k)               # Boltzmann constant
-m_Ar = np.float64(6.642160e-26)         # Mass of Ar
+#constants
+k_b = np.float64(scipy.constants.k)         #Boltzmann constant
+m_Ar = np.float64(6.642160e-26)             #mass of Arg
 
-# LJ Parameters for Argon
-sigma = np.float64(3.4e-10)
-epsilon = np.float64(1.65e-21)
-cutoff_distance = np.float64(1e-9)
+#sigma and Epsilon for Argon
+sigma = np.float64(3.4e-10)                #LJ sigma for Ar
+epsilon = np.float64(1.65e-21)             #LJ epsilon for Ar
+cutoff_distance = np.float64(1e-9)         #cutoff distance for LJ potential, normally taken as 2.5*sigma, which would be 8.5 in this case, but I am using 10 for simplicity
 
 # Pre-compute LJ constants
 sigma_6 = sigma ** 6

@@ -1,6 +1,5 @@
 import numpy as np
 import scipy
-import matplotlib.pyplot as plt
 
 #simulation paramters
 n = 500                                     #number of Atoms
