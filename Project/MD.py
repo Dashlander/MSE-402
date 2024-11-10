@@ -58,6 +58,7 @@ def main_loop(n, Edgelength_box, runtime_iterations, time_step, Temp):
     U = 0
     K = 0
     T = 0
+    print("iteration", "Potential Energy", "Kinetic Energy", "Temperature")
     for _ in range(runtime_iterations):
         U = 0
         for i in range(n):
@@ -72,7 +73,7 @@ def main_loop(n, Edgelength_box, runtime_iterations, time_step, Temp):
         F = np.zeros((n, 3))
         K = kinetic_energy(v)
         T = temperature(v)
-        print("iteration: ", _, "Potential Energy: ", U, "Kinetic Energy: ", K, "Temperature: ", T)
+        print (_, U, K, T)
     return U, K, T
 
 U, K, T = main_loop(n, Edgelength_box, runtime_iterations, time_step, Temp)
