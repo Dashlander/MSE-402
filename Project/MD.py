@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 #simulation paramters
 n = 500                                     #number of Atoms
-Edgelength_box = np.float64(5e-8)           #box length, in metres: 500 Angstroms
+Edgelength_box = np.float64(5e-9)           #box length, in metres: 500 Angstroms
 runtime_iterations = 1000                   #number of times the loop will run
 time_step = np.float64(1e-15)               #time step = 1fs
 Temp = np.float64(300)                         #temperature in Kelvin
