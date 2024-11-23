@@ -1,21 +1,25 @@
 import numpy as np
 import scipy
+import time
+
+#start time
+start_time = time.time()
 
 # Simulation parameters
 n = 500                                     # number of Atoms
-Edgelength_box = np.float64(5e-9)           # box length, in meters: 50 Angstroms
-runtime_iterations = 5000                 # number of times the loop will run
-time_step = np.float64(1e-15)               # time step = 1fs
-Temp = np.float64(300)                      # Initial temperature in Kelvin
+Edgelength_box = np.float128(2e-8)           # box length, in meters: 200 Angstroms
+runtime_iterations = 100000                 # number of times the loop will run
+time_step = np.float128(1e-15)               # time step = 1fs
+Temp = np.float128(1000)                      # Initial temperature in Kelvin
 
 # Constants
-k_b = np.float64(scipy.constants.k)         # Boltzmann constant
-m_Ar = np.float64(6.642160e-26)             # mass of Argon
+k_b = np.float128(scipy.constants.k)         # Boltzmann constant
+m_Ar = np.float128(6.633853e-26)             # mass of Argon
 
 # Sigma and Epsilon for Argon
-sigma = np.float64(3.4e-10)                 # LJ sigma for Ar
-epsilon = np.float64(1.65e-21)              # LJ epsilon for Ar
-cutoff_distance = np.float64(1e-9)          # cutoff distance for LJ potential
+sigma = np.float128(3.4e-10)                 # LJ sigma for Ar
+epsilon = np.float128(1.65355e-21)              # LJ epsilon for Ar
+cutoff_distance = sigma * 2.5          # cutoff distance for LJ potential
 
 # Pre-compute LJ constants
 sigma_6 = sigma ** 6
@@ -23,9 +27,16 @@ sigma_12 = sigma ** 12
 epsilon_48 = 48 * epsilon
 epsilon_24 = 24 * epsilon
 
+#seef
+np.random.seed(69)
+
 # Initialization functions
 def init_pos(n, Edgelength_box):
-    return np.random.uniform(0, Edgelength_box, (n, 3))
+    mean = Edgelength_box / 2
+    std_dev = Edgelength_box
+    r = np.random.normal(mean, std_dev, (n, 3))
+    r = r % Edgelength_box
+    return r
 
 def init_vel(n, Temp):
     vel = np.random.normal(0, np.sqrt(k_b * Temp / m_Ar), (n, 3))
@@ -48,7 +59,7 @@ def lj_potential_and_force(r_ij, cutoff_distance):
     
     # Lennard-Jones potential and force only for particles within cutoff
     U[mask] = 4 * epsilon * (r_12 - r_6)
-    F_mag[mask] = (epsilon_48 * r_12 - epsilon_24 * r_6) / np.sqrt(r_sq[mask])
+    F_mag[mask] = ((epsilon_24 * r_6) - (epsilon_48 * r_12)) / (np.sqrt(r_sq[mask]))
     
     return U.sum() / 2, F_mag[:, :, np.newaxis] * r_ij
 
@@ -58,7 +69,13 @@ def kinetic_energy(v):
 
 # Temperature Calculation
 def temperature(v):
-    return 2 * kinetic_energy(v) / (3 * k_b * n)
+    return (2 * kinetic_energy(v)) / (3 * k_b * n)
+
+#Berendsen Thermostat
+def berendsen_thermostat(v, Temp, tau, time_step):
+    T = temperature(v)
+    lf = np.sqrt(1 + ((time_step / tau) * ((Temp / T) - 1)))
+    return lf * v
 
 # Function to write atom positions in .xyz format
 def write_xyz(filename, r, iteration):
@@ -84,7 +101,7 @@ def main_loop(n, Edgelength_box, runtime_iterations, time_step, Temp):
     print("Iteration", "Potential Energy", "Kinetic Energy", "Temperature")
     
     # Initialize the .xyz file
-    output_filename = "dump.lammpstrj"
+    output_filename = "dump1.lammpstrj"
     with open(output_filename, 'w') as f:
         f.write(f"ITEM: TIMESTEP \n0\n")
         f.write(f"ITEM: NUMBER OF ATOMS\n{n}\n")
@@ -96,7 +113,7 @@ def main_loop(n, Edgelength_box, runtime_iterations, time_step, Temp):
 
     for iteration in range(runtime_iterations):
         # Position update
-        r += v * time_step + 0.5 * (F_sum / m_Ar) * time_step ** 2
+        r = (r) + ((v * time_step) + (0.5 * (F_sum / m_Ar) * time_step ** 2))
         r = r % Edgelength_box
         
         # New force calculation
@@ -104,17 +121,18 @@ def main_loop(n, Edgelength_box, runtime_iterations, time_step, Temp):
         U, F_new = lj_potential_and_force(r_ij, cutoff_distance)
         F_sum_new = F_new.sum(axis=1)
         
-        # Velocity update
-        v += 0.5 * (F_sum + F_sum_new) / m_Ar * time_step
-        
-        # Update force for next iteration
+        # Velocity and force update
+        v = v + (0.5 * ((F_sum + F_sum_new) / m_Ar) * time_step)
         F_sum = F_sum_new
+
+        if iteration % 3000 == 0:
+            v = berendsen_thermostat(v, Temp, 1000, time_step)
         
-        K = kinetic_energy(v)
-        T = temperature(v)
-        
-        if iteration % 100 == 0:
-            print(iteration, U, K, T)
+        if iteration % 1000 == 0:
+            K = (kinetic_energy(v) * scipy.constants.N_A * 0.239) / n    # convert to kcal/mol
+            T = temperature(v)
+            U = (U * scipy.constants.N_A * 0.239 ) / n                    # convert to kcal/mol
+            print(iteration, np.round(U,5), np.round(K,5), np.round(T,2))
             write_xyz(output_filename, r, iteration)
     
     return U, K, T
@@ -123,3 +141,6 @@ U, K, T = main_loop(n, Edgelength_box, runtime_iterations, time_step, Temp)
 print("Potential Energy: ", U)
 print("Kinetic Energy: ", K)
 print("Temperature: ", T)
+
+end_time = time.time()
+print("Time taken: ", end_time - start_time)
