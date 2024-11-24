@@ -125,8 +125,8 @@ def main_loop(n, Edgelength_box, runtime_iterations, time_step, Temp):
         v = v + (0.5 * ((F_sum + F_sum_new) / m_Ar) * time_step)
         F_sum = F_sum_new
 
-        if iteration % 3000 == 0:
-            v = berendsen_thermostat(v, Temp, 1000, time_step)
+        if iteration % 200 == 0:
+            v = berendsen_thermostat(v, Temp, 100, time_step)
         
         if iteration % 1000 == 0:
             K = (kinetic_energy(v) * scipy.constants.N_A * 0.239) / n    # convert to kcal/mol
