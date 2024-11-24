@@ -1,0 +1,27 @@
+units           real                       
+dimension       3                        
+atom_style      atomic                   
+boundary        p p p
+
+region          box block 0 200 0 200 0 200 units box
+create_box      1 box
+create_atoms    1 random 500 12345 box
+
+pair_style      lj/cut 10.0
+pair_coeff      * * 0.238 3.405
+
+mass            1 39.95
+velocity        all create 1000.0 12345 dist gaussian
+timestep        1.0
+
+thermo          1000
+thermo_style 	custom step ke pe etotal temp density
+
+minimize 1e-4 1e-6 1000 1000
+
+fix             1 all nve
+dump            dumper all custom 1000 dump.lammpstrj id x y z
+
+run             100000                  
+
+write_data      argon_final.data
