@@ -51,18 +51,18 @@ def minimum_image_distance(r, Edgelength_box):
 # Lennard-Jones potential and force calculations
 def lj_potential_and_force(r_ij, cutoff_distance):
     r_sq = np.sum(r_ij ** 2, axis=2)
-    np.fill_diagonal(r_sq, np.inf)
-    r_inv_sq = 1 / r_sq
-    r_6 = sigma_6 * r_inv_sq ** 3
+    mask = (r_sq < cutoff_distance ** 2) & (r_sq > np.float128(0))
+    
+    r_6 = sigma_6 / r_sq[mask] ** 3
     r_12 = r_6 ** 2
-
-    pot = 4 * epsilon * (r_12 - r_6)
-    F_mag = ((epsilon_48 * r_12) - (epsilon_24 * r_6)) / np.sqrt(r_sq)
-    np.fill_diagonal(F_mag, 0)
-    np.fill_diagonal(r_sq, np.inf)
-
-    F = F_mag[:, :, np.newaxis] * r_ij
-    return pot.sum()/2 , F
+    poten = np.zeros_like(r_sq)
+    F_mag = np.zeros_like(r_sq)
+    
+    # Lennard-Jones potential and force only for particles within cutoff
+    poten[mask] = 4 * epsilon * (r_12 - r_6)
+    F_mag[mask] = ((epsilon_48 * r_12) - (epsilon_24 * r_6)) / (np.sqrt(r_sq[mask]))
+    
+    return poten.sum() / 2, F_mag[:, :, np.newaxis] * r_ij
 
 # Kinetic Energy
 def kinetic_energy(v):
@@ -102,15 +102,9 @@ def main_loop(n, Edgelength_box, runtime_iterations, time_step, Temp):
     print("Iteration", "Potential Energy", "Kinetic Energy", "Temperature")
     
     # Initialize the .xyz file
-    output_filename = "dump1.lammpstrj"
+    output_filename = "dump2.lammpstrj"
     with open(output_filename, 'w') as f:
-        f.write(f"ITEM: TIMESTEP \n0\n")
-        f.write(f"ITEM: NUMBER OF ATOMS\n{n}\n")
-        f.write("ITEM: BOX BOUNDS pp pp pp\n")
-        f.write(f"0 {Edgelength_box*1e+10}\n0 {Edgelength_box*1e+10}\n0 {Edgelength_box*1e+10}\n")
-        f.write("ITEM: ATOMS id type x y z\n")
-        for i in range(n):
-            f.write(f"{i+1} 1 {np.round(r[i, 0]*1e+10,3)} {np.round(r[i, 1]*1e+10,3)} {np.round(r[i, 2]*1e+10,3)}\n")
+        pass
 
     for iteration in range(runtime_iterations):
         # Position update
