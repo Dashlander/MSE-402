@@ -113,27 +113,24 @@ def main_loop(n, Edgelength_box, runtime_iterations, time_step, Temp):
             f.write(f"{i+1} 1 {np.round(r[i, 0]*1e+10,3)} {np.round(r[i, 1]*1e+10,3)} {np.round(r[i, 2]*1e+10,3)}\n")
 
     for iteration in range(runtime_iterations):
-        # Position update
-        r = (r) + (v * time_step) + (0.5 * (F_sum / m_Ar) * (time_step ** 2))
+        v = v + (F_sum / m_Ar) * time_step
+
+        r = r + v * time_step
         r = r % Edgelength_box
-        
-        # New force calculation
+
         r_ij = minimum_image_distance(r, Edgelength_box)
         pot, F_new = lj_potential_and_force(r_ij, cutoff_distance)
-        F_sum_new = F_new.sum(axis=1)
-        
-        # Velocity and force update
-        v = v + (0.5 * ((F_sum + F_sum_new) / m_Ar) * 1e-5)
-        F_sum = F_sum_new
+        F_sum = F_new.sum(axis=1)   # ready for next iteration's velocity update
 
         if iteration % 25 == 0:
             v = berendsen_thermostat(v, Temp, tau, time_step)
-        
+
         if iteration % 100 == 0:
-            kin = (kinetic_energy(v) * scipy.constants.N_A * 0.239) / n    # convert to kcal/mol
+            kin = (kinetic_energy(v) * scipy.constants.N_A * 0.239) / n
             t = temperature(v)
-            pot = (pot * scipy.constants.N_A * 0.239 ) / n                    # convert to kcal/mol
-            print(iteration, np.round(pot,5), np.round(kin,5), np.round(t,2))
+            pot_print = (pot * scipy.constants.N_A * 0.239) / n
+            print(iteration, np.round(pot_print, 5), np.round(kin, 5), np.round(t, 2))
+            write_xyz(output_filename, r, iteration)
         
         if iteration % 100 == 0:
             write_xyz(output_filename, r, iteration)
